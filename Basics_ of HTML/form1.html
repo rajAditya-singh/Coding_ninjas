@@ -8,11 +8,25 @@
 <body>
     <h1>Please Enter your Details</h1>
     <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" />
+        <label for="username" >Username : </label>
+        <input type="text" id="username" 
+        required
+        name="username"
+        value="Your Name"
+        />
         <br />
-        <label for="password">Password:</label>
-        <input type="password" id="password">
+        <br />
+        <label for="password">Password :  </label>
+        <input 
+        type="password" 
+        id="password" 
+        required 
+        minlength="8" 
+        maxlength="8"
+        size="25"
+        name="password"
+        placeholder="Enter you password"/>
+        <br />
         <br />
         <input type="submit" />
     </form>

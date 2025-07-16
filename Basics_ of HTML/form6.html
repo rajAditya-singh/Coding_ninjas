@@ -1,0 +1,44 @@
+    <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Please Enter Your Details</h1>
+    <form>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your username" required>
+        <br>
+    
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password" required>
+        <br>
+        <fieldset>
+            <legend>Select your interests:</legend>
+            <input type="checkbox" id="Coding" name="intrest" value="Coding" />
+            <label for="Coding">Coding</label>
+
+            <input type="checkbox" id="Design" name="intrest" value="Design" />
+            <label for="Design">Design</label>
+
+            <input type="checkbox" id="Gaming" name="intrest" value="Gaming" />
+            <label for="Gaming">Gaming</label>
+        </fieldset>
+        <br />
+        <fieldset>
+            <legend>Select your gender:</legend>
+            <input type="radio" id="Male" name="gender" value="Male" />
+            <label for="Male">Male</label>
+
+            <input type="radio" id="Female" name="gender" value="Female" />
+            <label for="Female">Female</label>
+
+            <input type="radio" id="Other" name="gender" value="Other" />
+            <label for="Other">Other</label>
+        </fieldset>
+        <br />
+        <input type="submit" value="Submit">
+      </form>
+</html>

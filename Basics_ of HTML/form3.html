@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking Form</title>
+</head>
+
+<body>
+    <h1>Schedule Your Holiday on Paradise Island</h1>
+    <form>
+        <fieldset>
+            <legend>Personal Details</legend>
+            <label for="fullname">Full Name: </label>
+            <input type="text" id="fullname" required name="fullname" />
+            <br />
+            <br />
+            <label for="email">Email: </label>
+            <input type="email" id="email" required name="email" placeholder="abc@gmail.com" />
+            <br />
+            <br />
+            <label for="phoneno">Phone Number: </label>
+            <input type="tel" id="phoneno" required name="phoneno" placeholder="Enter Your Phone no." />
+            <br />
+            <br />
+            <label for="dob"> Date of Birth: </label>
+            <input type="date" id="dob" required name="dob" min="1925-01-01" max="2025-12-31" placeholder="enter" />
+        </fieldset>
+        <br />
+        <br />
+        <fieldset>
+            <legend>Trip Details</legend>
+            <label for="arrival">Arrival: </label>
+            <input type="datetime-local" id="arrival" required name="arrival" />
+            <br />
+            <br />
+            <label for="departure">Departure: </label>
+            <input type="datetime-local" id="departure" required name="departure" />
+            <br />
+            <br />
+            <label for="numofpep">Number Of Travelers: </label>
+            <input type="number" required id="numofpep" name="numofpep" max="5" min="1" />
+            <br />
+            <br />
+            <label for="accommodation">Accommodation Preferences:</label>
+            <select id="accommodation" name="accommodation">
+                <option value="Guest House">Guest House</option>
+                <option value="PG's">PG's</option>
+                <option value="Hotel">Hotel</option>
+                <option value="Zostals">Zostals</option>
+            </select>
+            <br />
+            <br />
+            <fieldset>
+                <legend><b>Prefered Activity:</b></legend>
+                <input type="checkbox" name="activity" value="Snorking" id="snorking" />
+                <label for="snorking">Snorking</label>
+                <br />
+                <input type="checkbox" name="activity" value="Hiking" id="hiking" checked />
+                <label for="hiking">Hiking</label>
+                <br />
+                <input type="checkbox" name="activity" id="spa" value="activity" />
+                <label for="spa">Spa</label>
+            </fieldset>
+            <p><b>Baby On Board</b></p>
+            <input type="radio" name="onboard" id="yes" value="Yes" />
+            <label for="yes">Yes</label>
+            <input type="radio" name="onboard" id="no" checked value="No" />
+            <label for="no">No</label>
+            <br />
+            <p><b>Special Requests</b></p>
+            <textarea cols="50" rows="10" name="specialreq"></textarea>
+        </fieldset>
+        <br />
+        <input type="submit">
+    </form>
+</body>
+
+</html>
