@@ -1,11 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <header>
+        <div>
+            <a href="index.html"><img src="../Multimedia/new_cn_logo.svg" alt="cn_logo"></a>
+        </div>
+    </header>
+
+    <hr />
+
+    <section id="contact_info">
+        <h2>Contact Details</h2>
+        <p>For inquiries you can reach us via email or phone number </p>
+        <p>Email : <a href="mailto:adityarajsingh@gmail.com">adityarajsingh@gmail.com</a></p>
+        <p>Phone No. : <a href="tel:6387474519" type="phone">6387474519</a></p>
+    </section>
+
+    <hr />
+
+    <section id="location">
+        <h2>Location Map</h2>
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14004.993677683604!2d77.16001955!3d28.652279550000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d02e530d65c5d%3A0xfa4bbc0a27aad3be!2sShadipur!5e0!3m2!1sen!2sin!4v1753084377444!5m2!1sen!2sin"
+            width="600" height="450" allowfullscreen=""></iframe>
+    </section>
+    <hr/>
+
+    <section id="form">
+        <form action="#" method="post">
+            <fieldset>
+                <legend><b>Feedback Form</b></legend>
+                <label for="name">Name : </label>
+                <input type="text" id="name" required name="name" />
+                <br/>
+                <br/>
+                <label for="email">Email : </label>
+                <input type="email" name="email" id="email" required />
+                <br/>
+                <br/>
+                <label for="sub">Subject : </label>
+                <input type="text" name="sub" id="sub" required>
+                <br/>
+                <br/>
+                <label for="Message">Message : </label>
+                <textarea name="Message" id="Message" cols="30" rows="5"></textarea>
+                <br/>
+                <br/>
+                <button type="button">Submit</button>
+            </fieldset>
+        </form>
+    </section>
 </body>
+
 </html>

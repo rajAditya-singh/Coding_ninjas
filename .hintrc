@@ -9,7 +9,15 @@
       {
         "label": "off"
       }
-    ]
+    ],
+    "axe/structure": [
+      "default",
+      {
+        "definition-list": "off",
+        "dlitem": "off"
+      }
+    ],
+    "disown-opener": "off"
   },
   "browserslist": [
     "defaults",
