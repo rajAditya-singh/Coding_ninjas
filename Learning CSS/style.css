@@ -16,6 +16,8 @@ p {
     color: black;
 } */
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+
 /* for Problem.html page
 #mytext {
     color: red;
@@ -24,3 +26,59 @@ p {
     color: yellow;
 }*/
 
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* for Problem2.html 
+#mainHeading{
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px cyan;
+    font-family: Arial;
+    font-weight: bold;
+    text-align: center;
+}
+.backgroundExample{
+    font-family: 'Franklin Gothic Medium', Arial, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+}
+.textSection{
+    font-family: 'Courier New', Courier, monospace;
+}
+.textStyle{
+    font-family: 'Times New Roman', serif;
+    font-weight: bolder;
+    text-align: center;
+}*/
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* for Units.html problem 1
+#mainHeading {
+  text-align: center;
+  font-size: 4vw;
+}
+.backgroundExample{
+  font-size: 1.5em;
+}
+img{
+  width: 40%;
+  height: 22rem;
+}
+.textStyle {
+  text-align: center;
+  font-size: 30px;
+}*/
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* for Units.html problem 2 */
+div{
+    background-color: blueviolet;
+    background-image: url(../Basic_of_html/favicon.ico), url(../Project/Multimedia/Web_development.jpg);
+    background-repeat: repeat-x;
+    /* background-position: bottom; */
+    /* background-size: cover; */
+    background-attachment: fixed;
+    /* width: 100vw;
+    height: 100vw; */
+}
