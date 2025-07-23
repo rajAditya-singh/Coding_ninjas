@@ -71,14 +71,62 @@ img{
 
 /* ++++++++++++++++++++++++++++++++++++++++++++++ */
 
-/* for Units.html problem 2 */
+/* for Units.html problem 2  
 div{
     background-color: blueviolet;
     background-image: url(../Basic_of_html/favicon.ico), url(../Project/Multimedia/Web_development.jpg);
     background-repeat: repeat-x;
-    /* background-position: bottom; */
-    /* background-size: cover; */
+    background-position: bottom;
+    background-size: cover;
     background-attachment: fixed;
-    /* width: 100vw;
-    height: 100vw; */
+    width: 100vw;
+    height: 100vw;
+}*/
+
+/* ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/*for problem2.html  
+  body{
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000002590_1708581210_scenery.jfif);
+    background-size: cover;
+    text-align: center;
+    background-attachment: fixed;
+  }
+  #mainHeading {
+    text-transform: uppercase;
+    text-shadow: 2px 2px 2px cyan;
+    font-family: "Arial", sans-serif;
+    font-weight: bold;
+  }
+  .backgroundExample {
+    font-family: "Franklin Gothic Medium", Arial, sans-serif;
+    font-weight: bolder;
+    letter-spacing: 2px;
+    color: white;
+  }
+
+  .textSection {
+    font-family: "Courier New", Courier, monospace;
+    color: white;
+  }
+
+  .textStyle {
+    font-family: "Times New Roman", serif;
+    font-weight: bolder;
+    color: white;
+  }
+  */
+
+  /* ++++++++++++++++++++++++++++++++++++++++++++++ */
+
+/* for color.html */
+#outer{
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+}
+#inner{
+  width: 50%;
+  height: 50%;
+  background-color: red;
 }
