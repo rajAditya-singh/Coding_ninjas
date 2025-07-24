@@ -1,0 +1,15 @@
+#outer{
+    background-color: red;
+    width: 200px;
+    height: 200px;
+}
+
+#inner{
+    background-color: aqua;
+    width: 100%;
+    height: 100%;
+    border: 2px dashed black;
+    /* border-width: 2px;
+    border-color: black;
+    border-style: solid; */
+}
