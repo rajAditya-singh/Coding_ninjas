@@ -1,0 +1,15 @@
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    display: inline;
+}
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    display: inline;
+}
+span{
+    display: block;
+}
