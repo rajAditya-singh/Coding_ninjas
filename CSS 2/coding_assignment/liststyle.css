@@ -1,4 +1,3 @@
-/* Contact Form Styling */
 body {
     font-family: "Arial", sans-serif;
     background-color: #f0f0f0;
@@ -11,7 +10,10 @@ body {
   .contact-form {
     background-color: #3498db;
     color: white;
-    padding: 20px;
+    padding: 10px;
+  }
+  h2{
+      margin-bottom: 20px;
   }
 
   /* Header Styling */
@@ -45,4 +47,22 @@ body {
     border: none;
     border-radius: 5px;
     width: 20%;
+  }
+
+  /* Contact Information Styling */
+  .contact-info {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+  }
+ul{
+    list-style-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000002643_1709059251_arrow-right.png);
+    padding: 0px;
+}
+  li {
+    background-color: #555;
+    color: white;
+    padding: 5px;
+    margin: 0px 0px 5px 30px;
+    border-radius: 5px;
   }
