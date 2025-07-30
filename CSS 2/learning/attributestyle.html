@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 5px;
+        }
+        /* a[title]{
+            font-size: 20px;
+            color: red;
+            margin: 0px 10px ;
+        } */
+        a[href="#about"]{
+            font-size: x-large;
+            font-weight: bold;
+            color: gold;
+        }
+        a[href*="book"]{
+            color: gray;
+        }
+        a[href^="#sa"]{
+            color: red;
+            font-size: large;
+            font-weight: bold;
+        }
+        a[href$="ad"]{
+            color: pink;
+            font-size: larger;
+        }
+    </style>
+</head>
+<body>
+    <!-- Attribute Selector -->
+    <nav>
+        <a href="#about">About</a>
+        <a href="#sale" title="Comming Soon">Sale</a>
+        <a href="#book">Book Now</a>
+        <a href="#Read">Read More</a>
+    </nav>
+</body>
+</html>
