@@ -7,3 +7,42 @@ div > div{
     display: inline-block;
     background-color: yellow;
 }
+
+div#linear > div:first-of-type {
+    background: linear-gradient(red, green,  blue);
+}
+div#linear > div:nth-of-type(2){
+    /* background: linear-gradient(to right, green, blue); */
+    background: linear-gradient(200deg, red 50%, green, blue);
+}
+div#linear > div:last-of-type{
+    background: linear-gradient(to top right, red, green, blue);
+}
+
+div#radial > div:first-of-type{
+    /* background: radial-gradient(closest-side at 40px 40px , red, green, blue); */
+    background: radial-gradient(closest-side, red, green, blue);
+}
+
+div#radial > div:nth-of-type(2){
+    background: radial-gradient( circle at 50%, blue, red, pink);
+    /* background: radial-gradient( ellipse at 0%, blue, red, pink); */
+}
+
+div#radial > div:last-of-type{
+    /* background: radial-gradient(farthest-side at 40px 40px , red, green, blue); */
+    /* background: radial-gradient(farthest-side, red, green, blue); */
+    background: radial-gradient(circle, red, green, blue);
+}
+
+
+div#conic > div:first-of-type{
+    background: conic-gradient(red, green, blue)
+}
+
+div#conic > div:nth-of-type(2){
+    background: conic-gradient(from 180deg, blue, pink, black);
+}
+div#conic > div:last-of-type{
+    background: conic-gradient(from 90deg at 0 0,green, red, black);
+}
