@@ -11,7 +11,7 @@ header {
   background-color: #222;
   color: #fff;
   padding: 10px;
-  background-image: url(photography.jpeg);
+  background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000002828_1711271938_ken-cheung-KonWFWUaAuk-unsplash.jpg);
   background-size: cover;
   background-position: center;
   filter: brightness(80%);
@@ -29,6 +29,11 @@ header a:hover {
   text-decoration: underline;
 }
 
+.container{
+  display: flex;
+  justify-content: space-between;
+}
+
 h1 {
   text-align: center;
   color: white;
@@ -39,8 +44,10 @@ h1 {
   margin-top: 50px;
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   margin-left: auto;
   margin-right: auto;
+  justify-content: space-evenly;
 }
 
 .gallery-item {
@@ -48,9 +55,23 @@ h1 {
   margin-bottom: 30px;
   padding: 0px;
   width: 300px;
+  background-color: #f2f2f2;
   position: relative;
   height: 400px;
   border-radius: 100px;
-  background-color: #f2f2f2;
-  margin-left: 10px;
+}
+/* Image properties( Learner can modify the properties as per their preference) */
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 70px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(255, 255, 255, 0.12) 0px -12px 30px,
+    rgba(255, 255, 255, 0.12) 0px 4px 6px,
+    rgba(255, 255, 255, 0.17) 0px 12px 13px,
+    rgba(255, 255, 255, 0.09) 0px -3px 5px;
 }
