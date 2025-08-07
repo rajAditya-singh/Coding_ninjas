@@ -1,0 +1,56 @@
+body {
+  background-color: #222;
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+header {
+  height: 150px;
+  padding: 10px 40px;
+  background-color: #222;
+  color: #fff;
+  padding: 10px;
+  background-image: url(photography.jpeg);
+  background-size: cover;
+  background-position: center;
+  filter: brightness(80%);
+}
+
+header a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  margin-left: 20px;
+  margin-top: 0px;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+h1 {
+  text-align: center;
+  color: white;
+}
+
+.main {
+  width: 80%;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.gallery-item {
+  text-align: center;
+  margin-bottom: 30px;
+  padding: 0px;
+  width: 300px;
+  position: relative;
+  height: 400px;
+  border-radius: 100px;
+  background-color: #f2f2f2;
+  margin-left: 10px;
+}
