@@ -2,12 +2,17 @@
     border: 2px solid black;
     height: 90vh;
     display: flex;
-    flex-direction: column-reverse;
-    flex-wrap: wrap-reverse;
+    flex-direction: row;
+    flex-wrap: wrap;
+    /* align-items: baseline; */
+    align-content: flex-start;
     /* flex-direction: column; */
     /* flex-direction: row-reverse; */
     /* flex-direction: column-reverse; */
     /*justify-content: space-evenly;*/ /*center; flex-end; flex-end; space-around; space-between;*/
+    /* column-gap: 10px; */
+    /* row-gap: 20px; */
+    /* gap: 10px; */
 }
 div{
     width: 100px;
@@ -18,15 +23,22 @@ div{
 }
 #box1{
     background-color: red;
+    /* line-height: 100px */
+    /* order: 0; */
 }
 #box2{
     background-color: green;
-}
-#box3{
+    /* height: 20px; */
+    /* order: -1; */
+    /* align-self: center; */
+  }
+  #box3{
     background-color: yellow;
-}
-#box4{
+    /* order: -2; */
+  }
+  #box4{
     background-color: blue;
+    /* font-size: 4em; */
 }
 
 /* body {
