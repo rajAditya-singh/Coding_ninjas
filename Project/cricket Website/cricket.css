@@ -1,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#container{
+    width: 100%;
+    height: 100vh;
+    background-image: url(https://ninjasfiles.s3.amazonaws.com/asset_0000000000003226_1714596295_pics1.png);
+    filter: brightness(80%);
+    position: relative;
+}
+#head{
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(3, 3, 101);
+    color: white;
+    text-align: center;
+    padding-top: 1rem;
+    line-height: 50px;
+    filter: drop-shadow(5px 5px 5px black);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    position: fixed;
+    font-size: x-large;
+}
+
+#hero{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
