@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="submit" method="post">
+        <h1>Please fill the following details</h1>
+        <fieldset>
+            <legend>Form</legend>
+            <label for="fname">First Name: </label>
+            <input type="text" id="fname" name="fname" />
+            <br/>
+            <label for="num">Phone Number: </label>
+            <input type="tel" name="num" id="num" />
+            <br/>
+            <label for="dob">DOB: </label>
+            <input type="datetime-local" name="dob" id="dob" />
+            <br/>
+            <label for="age">Age: </label>
+            <input type="text" name="age" id="age" size="5" />
+            <br />
+            <label for="gender">Gender: </label>
+            <select name="gender" id="gender">
+                <option value="male" >Male</option>
+                <option value="female" selected>Female</option>
+            </select>
+            <br/>
+            <label for="pic">Profile Picture: </label>
+            <input type="file" id="pic" name="pic" />
+            <br/>
+            <input type="submit" name="submit" id="submit" />
+            <input type="button" name="reset" value="Reset" id="reset">
+        </fieldset>
+    </form>
+</body>
+</html>
