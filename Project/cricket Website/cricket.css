@@ -34,22 +34,24 @@
     font-weight: bold;
     font-size: xx-large;
     line-height: 70px;
-    position: absolute;
+    position: fixed;
     top: 15%;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;    
 }
 #coachs{
     position: sticky;
+    top: 0;
     width: 100vw;
     margin-top: 50px;
 }
 .image{
-    width: 15%;
     height: 25vh;
     border: 10px solid white;
     border-radius: 20px;
     z-index: 2;
     filter: brightness(80%);
     margin-right: 50px;
-    
+}
+.overlay-text{
+    position: absolute;
 }
