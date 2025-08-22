@@ -2,6 +2,10 @@
     font-family: ShortBaby;
     src: url(./assets/ShortBaby-Mg2w.ttf);
 }
+body{
+    font-family: "Sedan SC", serif;
+    background-color: #ebe3e3b7;
+}
 .left{
     background-color: black;
     height: 90vh;
@@ -12,9 +16,6 @@
     position: sticky;
     top: 20px;
     gap: 10px;
-}
-.right{
-    background-color: aqua;
 }
 main{
     display: grid;
@@ -44,7 +45,7 @@ main{
     color: white;
     padding-right: 20px;
     margin-left : 30px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 .nav a{
     text-decoration: none;
@@ -52,4 +53,65 @@ main{
     padding-left: 20px;
     font-weight: 400;
     font-size: 20px;
+}
+.nav > a:hover{
+    color: lightgray;
+}
+.right{
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    /* padding: 0px 20px 0px 20px ; */
+}
+.right header{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+header>h1{
+    margin-top: 10px;
+    margin-left: 50px;
+    font-size: 35px;
+    font-weight: 700;
+}
+header > input{
+    border: 0px solid white;
+    width: 200px;
+    height: 25px;
+    padding: 5px;
+    margin-right: 5%;
+    margin-top: 20px;
+    border-radius: 30px;
+}
+header > input:focus{
+    outline: none;
+    border: 3px solid lightgreen;
+}
+
+#board{
+    width: 80%;
+    border-radius: 25px;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+}
+#board img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#data  h2{
+    text-align: center;
+    text-decoration: underline;
+    margin-top: 50px;
+    padding: 20px;
+}
+
+.container{
+
+}
+.card{
+
 }
