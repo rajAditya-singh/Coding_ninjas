@@ -236,19 +236,53 @@ tr:nth-child(even) {
 }
 
 
-#contact{
-    text-align: center;
-    margin-top: 50px;
-    margin-left: 50px;
+.contact-inner{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
 }
-.content{
-    display: flex;
-    justify-content: space-between;
+iframe{
+    border-radius: 20px;
 }
-.form{
-    width: 50%;
-    display: flex;
-    flex-direction: column;
+.feedback-form{
     background-color: white;
-    padding: 10px;
+    padding: 20px;
+    border-radius: 20px;
+    text-align: center;
 }
+.feedback-form h2{
+    font-size: 24;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-decoration: underline;
+}
+.feedback-form input[type="text"],
+.feedback-form input[type="email"],
+.feedback-form textarea{
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 15px;
+    /* margin-right: 10px; */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.feedback-form textarea{
+    height: 150px;
+    resize: vertical;
+}
+.feedback-form input[type="submit"]{
+    background-color: #9bdd7c;
+    width: 95%;
+    padding: 10px;
+    border: none;
+    /* margin-right: 10px; */
+    border-radius: 5px;
+    color: white;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+
