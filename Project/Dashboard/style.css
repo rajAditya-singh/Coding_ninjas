@@ -110,8 +110,145 @@ header > input:focus{
 }
 
 .container{
-
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    font-family: ShortBaby;
+    margin-left: 50px;
 }
 .card{
+    height: 100px;
+    width: 180px;
+    border-radius: 20px;
+}
+.card1{
+    background-color: lightgreen;
+    /* filter: opacity(60%); */
+}
+.card>i{
+    margin-left: 150px;
+    margin-top: 20px;
+}
+.cardHead{
+    margin: 0px;
+    margin-left: 10px;
+    font-size: large;
+}
+.cardData{
+    margin-top: 4px;
+    margin-left: 10px;
+    font-size: medium;
+}
+.card:hover{
+    background: radial-gradient(closest-side,  pink, lightblue);
+}
+.card2{
+    background-color: bisque;
+}
+.card3{
+    background-color: lightpink;
+}
+.card4{
+    background-color: lightblue;
+}
 
+#users{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 70px;
+}
+#users > h2{
+    text-decoration: underline;
+}
+table{
+    width: 95%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    background-color: white;
+}
+table th,
+table td{
+    padding: 15px 100px;
+    text-align: left;
+}
+table th{
+    background-color: #a39696;
+}
+/* th{
+    background-color: darksalmon;
+} */
+/* table, th, td{
+    padding: 15px;
+} */
+/* tr:nth-child(odd) {
+    background-color: #ffffff;
+}
+tr:nth-child(even) {
+    background-color: rgb(230, 227, 227);
+} */
+/* th, td{
+    text-align: left;
+    padding-left: 120px;
+} */
+ table tbody tr:nth-child(even){
+    background-color: #eaeaea;
+ }
+ table tbody tr:hover{
+    background-color: lightgray;
+}
+
+#schedule{
+    width: 85%;
+    height: 60vh;
+    background-color: white;
+    border-radius: 20px;
+    padding: 20px;
+    margin: 65px;
+    overflow-y: scroll;
+}
+.heading{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between;
+}
+
+.box_container{
+    display: flex;
+    flex-direction: column;
+    padding-left: 10px;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+.box_container h3{
+    margin: 4px;
+}
+.box_container p{
+    color: #aeaeae;
+    margin: 4px;
+    font-weight: 600;
+}
+.box_container:nth-child(odd){
+    border-left: 3px solid blue;
+}
+.box_container:nth-child(even){
+    border-left: 3px solid green;
+}
+
+
+#contact{
+    text-align: center;
+    margin-top: 50px;
+    margin-left: 50px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+}
+.form{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 10px;
 }
