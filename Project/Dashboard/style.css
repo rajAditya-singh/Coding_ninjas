@@ -6,6 +6,7 @@ body{
     font-family: "Sedan SC", serif;
     background-color: #ebe3e3b7;
 }
+
 .left{
     background-color: black;
     height: 90vh;
@@ -96,6 +97,15 @@ header > input:focus{
     padding: 10px;
     margin: auto;
 }
+article h2 {
+    text-align: center;
+    text-decoration: underline;
+}
+article h2:hover{
+    text-decoration-color: goldenrod;
+    font-size: 32px;
+    transition: 1s;
+}
 #board img{
     width: 100%;
     height: 100%;
@@ -103,8 +113,6 @@ header > input:focus{
 }
 
 #data  h2{
-    text-align: center;
-    text-decoration: underline;
     margin-top: 50px;
     padding: 20px;
 }
@@ -154,13 +162,10 @@ header > input:focus{
 }
 
 #users{
-    text-align: center;
     margin-top: 50px;
     margin-left: 70px;
 }
-#users > h2{
-    text-decoration: underline;
-}
+
 table{
     width: 95%;
     border-collapse: collapse;
@@ -236,6 +241,9 @@ tr:nth-child(even) {
 }
 
 
+#contact > h2{
+    margin-bottom: 20px;
+}
 .contact-inner{
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -268,6 +276,7 @@ iframe{
     /* margin-right: 10px; */
     border: 1px solid #ccc;
     border-radius: 5px;
+    font-weight: 500;
 }
 .feedback-form textarea{
     height: 150px;
@@ -281,8 +290,33 @@ iframe{
     /* margin-right: 10px; */
     border-radius: 5px;
     color: white;
-    font-weight: 400;
+    font-weight: 600;
     cursor: pointer;
+}
+
+footer{
+    width: 100%;
+    background-color: black;
+    text-align: center;
+    padding: 20px 10px;
+    color: white;
+}   
+.icons{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.icons > a{
+    font-size:25px;
+    margin-right: 15px;
+    color: white;
+}
+.icons > a:hover{
+    color: #a39696;
+}
+footer p{
+    margin-bottom: 5px;
+    font-size: 15px;
+    color: #eaeaea;
 }
 
 
