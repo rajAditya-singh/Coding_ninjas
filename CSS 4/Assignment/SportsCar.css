@@ -2,7 +2,8 @@ body {
   background-color: #e8f9fd;
   margin: 0;
   padding: 0;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
 }
 
 header {
@@ -40,9 +41,6 @@ h1 {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
-nav {
-  /* grid-area: navs; */
-}
 
 .container {
   display: grid;
@@ -51,7 +49,8 @@ nav {
   padding: 1rem;
   width: 90%;
   margin: 6rem auto 0px auto;
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
 }
 
 .grid-item {
@@ -106,23 +105,76 @@ footer {
   grid-row: 2;
 }
 
-/* Give tablet view media queries for screen widths between 768px and 1024px below */
+/* Give mobile view media queries for screen width 767px below */
+@media screen and  (max-width:767px){
+   header{ 
+    grid-template-columns: 1fr;
+    grid-template-areas: "title" "navs";
+    padding: 0.5rem;
+    }
+    nav{
+      display: flex;
+      justify-content: center;
+    }
+    h1{
+      font-size: 1.5rem;
+    }
+    .container{
+      grid-template-columns: 1fr;
+      margin-top: 6rem;
+      width: 100%;
+      padding: 0pc;
+    }
+    .grid-item{
+      width: 100%;
+      padding: 0.5rem;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .image-card{
+      width: 90%;
+      height: auto;
+    }
+    .content-card{
+      width: 100%;
+      height: auto;
+      padding: 1rem;
+      box-sizing: border-box;
+    }
+    img{
+      width: 100%;
+      height: auto;
+      border-radius: 10%;
+      object-fit: cover;
+    }
+    footer{
+      padding: 0.5rem;
+      position: static;
+    }
+}
+/* Tablet view*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   header {
     grid-template-columns: 1fr;
     grid-template-areas: "title navs";
     padding: 1rem;
   }
+
   h1 {
     font-size: 1.8rem;
   }
+
   .container {
     grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
   }
+
   .image-card,
   .content-card {
     padding: 1rem;
   }
+
   img {
     border-radius: 20%;
   }
