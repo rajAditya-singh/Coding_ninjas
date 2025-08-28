@@ -9,7 +9,14 @@
   width: 90%;
   margin: auto;
 }
-
+h1{
+  font-size: 6vw;
+  text-align: left;
+}
+img{
+  max-width: 100%;
+  min-width: 500px;
+}
 p {
   margin: 0;
 }
@@ -20,6 +27,10 @@ p {
   #text{
     column-count: 2;
   }
+  h1{
+  font-size: 6vw;
+  text-align: center;
+}
 }
 @media screen and (min-width:780px){
   #div1{

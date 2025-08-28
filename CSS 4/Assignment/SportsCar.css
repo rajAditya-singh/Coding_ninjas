@@ -179,3 +179,17 @@ footer {
     border-radius: 20%;
   }
 }
+
+@media screen and (orientation: landscape){
+  .container{
+    margin-top: 7rem;
+  }
+  footer{
+    padding: 0.5rem;
+  }
+}
+@media screen and (min-width:1024px) and (orientation: landscape){
+  header{
+    padding: 0.5rem;
+  }
+}
