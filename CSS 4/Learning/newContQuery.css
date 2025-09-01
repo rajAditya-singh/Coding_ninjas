@@ -1,0 +1,11 @@
+*{
+    /* box-sizing: border-box; */
+}
+
+body{
+    /* width: 100%; */
+    min-height: 100vh;
+    background: lavender;
+    padding: 0 1rem;
+    margin: 0;
+}
