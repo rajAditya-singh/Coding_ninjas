@@ -61,47 +61,44 @@ h3 {
   font-size: clamp(1.4rem, 4cqi, 2.5rem);
 }
 
-
-
-.article-container{
+.article-container {
   /* container-type: inline-size;
   container-name: article; */
   container: article / inline-size;
 }
 
-@container article (inline-size >700px){
-  article{
+@container article (inline-size >500px) {
+  article {
     grid-template-columns: 1fr 2fr;
   }
 }
 
-@container article (inline-size>800px){
-  article{
+@container article (inline-size>800px) {
+  article {
     grid-template-columns: 1fr 1fr;
     gap: 1.5rem;
   }
 }
 
-
-
-@media screen and (width>800px) {
+@media (width>800px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
   }
-  .grid .article-container:first-child {
+  .article-container:first-child {
     grid-column: span 2;
   }
 }
-@media screen and (width>1000px) {
+
+@media (width>1000px) {
   .grid {
     grid-template-columns: repeat(4, 1fr);
   }
-  .grid .article-container:first-child {
+  .article-container:first-child {
     grid-column: span 4;
   }
-  .grid .article-container:nth-child(2) {
-    grid-column: span 2;
-  }.grid .article-container:nth-child(3) {
+
+  .article-container:nth-child(2),
+  .article-container:nth-child(3) {
     grid-column: span 2;
   }
 }
