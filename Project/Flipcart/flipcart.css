@@ -1,19 +1,27 @@
-*{
+body {
     margin: 0;
     padding: 0;
-}
-body{
     background-color: #f1f2f4;
+    font-family: Arial, sans-serif; 
 }
-header{
+
+header {
     background-color: white;
-    width: 100vw;
-    height: 12vh;
+    color: #ffffff;
+    padding: 5px 0;
 }
-.logoImg{
+
+.header_logo {
+    margin-left: 5rem;
     width: 8rem;
 }
-.logoImg img{
+
+.header_logo img {
     object-fit: cover;
     width: 100%;
+}
+
+#search {
+    width: 30vw;
+    height: 5vh;
 }

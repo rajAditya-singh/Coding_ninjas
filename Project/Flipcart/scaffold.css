@@ -12,9 +12,9 @@ header {
 }
 
 .header_logo img {
-  max-width: 25px ;
-  margin-left: 20px;
-  margin-top: 2px;
+  max-width: 8rem ;
+  /* margin-left: 20px; */
+  /* margin-top: 2px; */
 }
 
 .search {
@@ -29,11 +29,11 @@ input:focus {
 .header_wrapper {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 2 0px;
 }
 
 .header_search input {
