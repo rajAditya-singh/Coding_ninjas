@@ -1,0 +1,43 @@
+.box{
+    height: 70px;
+    width: 150px;
+    background-color: red;
+    color: white;
+    margin: 10px;
+    /* padding: 10px; */
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 900;
+    /* display: inline-block; */
+    line-height: 3rem;
+}
+body:hover .box{
+    background-color: blue;
+    color: yellow ;
+    width: 500px;
+}
+.trans{
+    transition-duration: 1s;
+    transition-property: all;
+    /* transition-delay: 1s; */
+    transition: width 2s steps(3) 1s, 
+                background-color 3s ease-in-out 1s;
+}
+.easein{
+    transition-timing-function: ease-in;
+}
+.easeout{
+    transition-timing-function: ease-out;
+}
+.easeinout{
+    transition-timing-function: ease-in-out;
+}
+.stepstart{
+    transition-timing-function: step-start;
+}
+.stepend{
+    transition-timing-function: step-end;
+}
+.steps{
+    transition-timing-function: steps();
+}

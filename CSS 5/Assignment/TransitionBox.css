@@ -1,0 +1,20 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  width: 200px;
+  height: 200px;
+  background-color: #4285f4;
+  /* Add transition here */
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Add transform effect over hover below */
+.box:hover{
+  transform: rotate(360deg) scale(1.2);
+ 
+}
