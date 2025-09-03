@@ -10,12 +10,21 @@
     color: azure;
     border: solid black;
     border-width: 10px 5px;
+    transition: transform 2s ease-in-out;
 }
 
 .box:hover{
-    /* transform: rotate(90deg); */
+    /* transform: skewX(5deg) rotate(15deg); */
+    transform: rotate(360deg);
     /* transform: rotate(.25turn); */
     /* transform: scale(2.5, 1.5); */
     /* transform: skew(45deg, 10deg); */
-    transform: translate(120%, 100px);
+    
+    /* transform: translate(100px) rotate(120deg); */
+    /* transform: rotate(360deg) translate(100px) ; */
+    /* transform: rotate(120deg); */
+    /* transform: rotateY(180deg); */
+    /* transform: rotateZ(120deg); */
+    /* transform: skew(45deg); */
+    /* transform: skewY(45deg); */
 }
