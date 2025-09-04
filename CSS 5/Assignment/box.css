@@ -1,0 +1,20 @@
+.container{
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: antiquewhite;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.5s ease-in-out, background-color 1s linear;
+}
+.box:hover{
+    transform: translate(-50%, -50%) scale(1.2) rotate(90deg);
+    background-color: green;
+}
