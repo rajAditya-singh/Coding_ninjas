@@ -29,12 +29,9 @@
   <body class="container bg-black">
     <div>
       <nav>
-        <div
-          class="container-fluid d-flex justify-content-between align-items-center bg-dark"
-        >
-          <a class="fs-2 p-2 text-decoration-none ms-5 text-white"
-            >Credit Card Company</a
-          >
+        <div class="container-fluid d-flex justify-content-between align-items-center bg-dark px-5">
+          <a class="fs-2 p-2 text-decoration-none text-white"
+            >Credit Card Company</a>
           <div id="navbarSearch">
             <form class="d-flex gap-1">
               <input
@@ -295,70 +292,91 @@
           </div>
 
           <aside class="col-md-5 mt-5">
-            <h4>
+            <h4 class="d-flex justify-content-between">
               <span class="text-white">Your cart</span>
-              <span>3</span>
+              <span class="bg-secondary px-3 py-2 rounded-5 fs-5">3</span>
             </h4>
-            <ul>
-              <li>
+            <ul class="bg-white text-black list-unstyled rounded-2">
+              <li class="d-flex justify-content-between pe-3 ps-3 py-2">
                 <div>
                   <h6 class="my-0">Product name</h6>
                   <small class="text-muted">Brief description</small>
                 </div>
                 <span class="text-muted">$12</span>
               </li>
-              <li>
+              <hr class="my-0" />
+              <li class="d-flex justify-content-between px-3 py-2">
                 <div>
                   <h6 class="my-0">Second product</h6>
                   <small class="text-muted">Brief description</small>
                 </div>
                 <span class="text-muted">$8</span>
               </li>
-              <li>
+              <hr class="my-0" />
+              <li class="d-flex justify-content-between px-3 pt-2 py-2">
                 <div>
                   <h6 class="my-0">Third item</h6>
                   <small class="text-muted">Brief description</small>
                 </div>
                 <span class="text-muted">$5</span>
               </li>
-              <li>
+              <hr class="my-0" />
+              <li class="d-flex justify-content-between px-3 py-2">
                 <div class="text-success fw-bold">
                   <h6 class="my-0">Promo code</h6>
                   <small>EXAMPLECODE</small>
                 </div>
                 <span class="text-success fw-bold">-$5</span>
               </li>
-              <li class="bg-dark text-white">
+
+              <li
+                class="bg-dark text-white border rounded-bottom-2 py-2 px-3 d-flex justify-content-between"
+              >
                 <span>Total (USD)</span>
                 <strong>$20</strong>
               </li>
             </ul>
 
-            <form>
-              <div>
-                <input type="text" placeholder="Promo code" />
-                <button type="button">Redeem</button>
+            <form class="bg-white p-2 rounded-2 mb-5">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Promo code"
+                />
+                <button
+                  class="btn btn-secondary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#redeemModal"
+                  type="button"
+                >
+                  Redeem
+                </button>
               </div>
             </form>
 
-            <section class="card-images">
+            <section class="card-images d-flex flex-column align-items-center">
               <figure>
                 <img
-                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000003857_1719148984_images.jpg"
+                  class="rounded-3"
+                  src="./visa.jpeg"
                   alt="Placeholder Image"
-                />
-              </figure>
-              <figure>
-                <img
-                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000003858_1719148991_images (1).jpg"
                   width="300px"
-                  alt="Placeholder Image"
                 />
               </figure>
               <figure>
                 <img
-                  src="https://ninjasfiles.s3.amazonaws.com/asset_0000000000003859_1719149000_images (2).jpg"
-                  class="w-sm-50"
+                  class="rounded-4"
+                  src="./master.jpeg"
+                  alt="Placeholder Image"
+                  width="300px"
+                />
+              </figure>
+              <figure class="text-center">
+                <img
+                  class="rounded-3"
+                  src="./debit.jpeg"
+                  width="300px"
                   alt="Placeholder Image"
                 />
               </figure>
@@ -421,6 +439,7 @@
       tabindex="-1"
       aria-labelledby="redeemModalLabel"
       aria-hidden="true"
+      class="modal fade"
     >
       <div class="modal-dialog">
         <div class="modal-content">
@@ -433,20 +452,38 @@
               type="button"
             ></button>
           </div>
-          <div>Please enter your promo code to redeem your offer.</div>
-          <div>
-            <button type="button">Close</button>
-            <button type="button">Redeem</button>
+          <div class="modal-body">
+            Please enter your promo code to redeem your offer.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              type="button"
+            >
+              Close
+            </button>
+            <button class="btn btn-primary" type="button">Redeem</button>
           </div>
         </div>
       </div>
     </div>
 
     <!-- Alerts Example -->
-    <div role="alert">
-      <strong>Warning!</strong> Please ensure all fields are correctly filled
-      before submitting the form.
-      <button type="button"   ></button>
+    <div
+      class="alert alert-warning alert-dismissible fade show bg-warning-subtle p-3 rounded-2 d-flex justify-content-between"
+      role="alert"
+    >
+      <p class="text-black my-auto">
+        <strong>Warning!</strong> Please ensure all fields are correctly filled
+        before submitting the form.
+      </p>
+      <button
+        class="btn-close my-auto"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+        type="button"
+      ></button>
     </div>
 
     <script
