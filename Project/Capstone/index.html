@@ -33,29 +33,62 @@
     ></script>
     <link rel="stylesheet" href="style.css" />
   </head>
+
   <body>
     <!-- Header/NavBar -->
     <header>
-      <div class="container">
+      <div class="container-fluid container-lg">
         <div class="main-nav">
           <div class="logo">
             <img src="./assets/logo.jpeg" alt="" />
           </div>
-          <!-- <div class="navbar">
-                  <a href="" class="Nav-item">Home</a>
-                  <a href="" class="Nav-item">Services</a>
-                  <a href="" class="Nav-item">About</a>
-                  <a href="" class="Nav-item">Testimonials</a>
-                  <a href="" class="Nav-item">Contact Support</a>
-              </div> -->
           <ul class="navlist">
-            <li><a href="#" class="Nav-item">Home</a></li>
+            <li><a href="#" class="Nav-item active">Home</a></li>
             <li><a href="#Services" class="Nav-item">Services</a></li>
             <li><a href="#About" class="Nav-item">About</a></li>
             <li><a href="#Testimonials" class="Nav-item">Testimonials</a></li>
             <li><a href="#Contact" class="Nav-item">Contact Support</a></li>
           </ul>
+          <!-- Hamburger Icon -->
+          <div class="hamburger-menu">
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navlist"
+              aria-controls="navlist"
+              aria-expanded="false"
+              aria-label="Expand navigation"
+            >
+              <i class="fa-solid fa-bars fs-5"></i>
+            </button>
+          </div>
         </div>
+      </div>
+      <div class="collapse navbar-collapse bg-dark d-sm-none" id="navlist">
+        <ul class="navbar-nav mx-0">
+          <li class="nav-item">
+            <a class="nav-link text-white text-center" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-center" href="#Services"
+              >Services</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-center" href="#About">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-center" href="#Testimonials"
+              >Testimonials</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white text-center" href="#Contact"
+              >Contact Support</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
   </body>

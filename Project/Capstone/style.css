@@ -1,53 +1,84 @@
 @import url("https://fonts.googleapis.com/css2?family=Edu+NSW+ACT+Cursive:wght@700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Sedan+SC&display=swap");
-  
 
-:root{
-    --primary-color: #ff511a;
-    --secondary-color: #43ba7f;
-    --text-color: #212741;
-    --bg-color: #fff;
-    --link-color: #e36402;
-    --dark-bg-color: #181d30;
+:root {
+  --primary-color: #ff511a;
+  --secondary-color: #43ba7f;
+  --text-color: #212741;
+  --bg-color: #fff;
+  --link-color: #e36402;
+  --dark-bg-color: #181d30;
 }
 
-body{
-    background: var(--bg-color);
-    font-family: "Poppins", sans-serif;
-    color: var(--text-color);
-    overflow-x: hidden;
+body {
+  background: var(--bg-color);
+  font-family: "Poppins", sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
 }
-header{
-    background-color: rgb(116, 113, 113);
+/* a{
+    text-decoration: none !important;
+} */
+header {
+  background-color: rgb(116, 113, 113);
 }
-.main-nav{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 1rem 0;
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
 }
-.logo img{
-    height: 5em;
-    border-radius: 50%;
+.logo img {
+  height: 5em;
+  border-radius: 50%;
 }
-.navlist{
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    margin: 0;
-    padding: 0;
+.navlist {
+  list-style: none;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+  padding: 0;
 }
-.main-nav li{
-    padding: 0 1rem;
+.main-nav li {
+  padding: 0 1rem;
 }
-.main-nav li a{
-    text-decoration: none;
-    color: var(--bg-color);
-    font-weight: 300;
-    font-size: 1rem;
+.main-nav li a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: 300;
+  font-size: 1rem;
 }
-.Nav-item:active{
-    color: var(--link-color);
+
+.navlist li a:hover,
+.navlist li a.active {
+  color: var(--link-color);
 }
-.Nav-item:hover{
-    color: var(--link-color);
+
+.hamburger-menu {
+  display: none;
+}
+
+
+@media screen and (max-width: 768px) {
+  .logo img {
+    height: 4em;
+  }
+  .main-nav li {
+    padding: 0 0.5rem;
+}
+.navlist li a {
+    font-size: 0.9rem;
+    white-space: nowrap;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .navlist {
+    display: none;
+  }
+  .hamburger-menu {
+    display: block;
+    margin-left: auto;
+    margin-right: 1rem;
+    /* margin-top: 1rem; */
+  }
 }
