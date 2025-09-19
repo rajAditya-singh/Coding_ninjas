@@ -9,12 +9,12 @@ header {
   background-color: #ffffff;
   color: #fff;
   padding: 1rem 0;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
 .header_logo img {
   width: 20%;
-  /* margin-left: 4rem; */
+  margin-left: 4rem;
 }
 
 #search {
