@@ -59,15 +59,14 @@ header {
   display: none;
 }
 
-
 @media screen and (max-width: 768px) {
   .logo img {
     height: 4em;
   }
   .main-nav li {
     padding: 0 0.5rem;
-}
-.navlist li a {
+  }
+  .navlist li a {
     font-size: 0.9rem;
     white-space: nowrap;
   }
@@ -85,61 +84,205 @@ header {
   }
 }
 
-
 /* Hero Section  */
-.hero{
+.hero {
   background-image: url(./assets/hero-bg.jpeg);
-  width: 100%;
+  width: 100vw;
   height: 100%;
   background-size: cover;
   animation: slidIn 1s ease-in-out forwards;
 }
 
-.title h2 em{
-  color: var(--link-color);
+.title {
+  width: 50%;
 }
-/* .title p span{
+.title h2 {
+  color: white;
+  font-weight: bolder;
+  /* font-size: 3.8rem; */
+  font-size: 4.6vw;
+  padding: 2rem 0 1rem 1rem;
+  /* line-height: 11.5vh; */
+}
+.title h2 em {
   color: var(--link-color);
-  }
-.title p:nth-last-of-type(1){
-  color: var(--link-color);
-} */
-.line{
+  font-style: normal;
+}
+
+.divider {
   background-color: var(--bg-color);
-  width: 70px;
-  height: 8px;
-  margin-left: 1rem;
+  width: 5rem;
+  height: 0.4rem;
+  border-radius: 1rem;
+  margin: 1rem 0 1.5rem 1rem;
 }
-@keyframes slidIn{
-  0%{
+
+.para {
+  color: var(--bg-color);
+  margin-left: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  padding-bottom: 2rem;
+}
+@keyframes slidIn {
+  0% {
     opacity: 0;
     transform: translateY(-50px);
   }
-  100%{
+  100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@media screen and (max-width:992px) {
-  
-  .title{
+@media screen and (max-width: 992px) {
+  .title {
     text-align: center;
-    width: 100% ;
-    padding: 3.5rem;
+    width: 90%;
+    padding-top: 3.5rem;
     margin: auto;
   }
-  .title h2{
+  .title h2 {
     font-size: 2rem;
+    line-height: 2.4rem;
+    margin-bottom: 0px;
+    line-height: 2.5rem;
   }
-  .line{
-    /* margin-left: auto;
-    margin-right: auto; */
+  .divider {
     margin: auto;
-    margin-top: -10px;
   }
-  .divider{
-    margin: 0;
-    padding: 0;
+  .para {
+    font-size: 0.9rem;
+    padding: 1rem 3rem 4rem 3rem;
+    margin-top: 0;
+    line-height: 2rem;
   }
+}
+
+@media screen and (max-width: 768px) {
+  .divider {
+    width: 11rem;
+  }
+}
+@media screen and (max-width: 576px) {
+  .title  {
+    padding: 5rem 0;
+  }
+  
+  .divider {
+    display: none;
+  }
+  .para {
+    display: none;
+  }
+}
+
+.section-head{
+  text-align: center;
+  margin-top: 2rem;
+  /* margin-bottom: 5rem; */
+}
+.section-head h5{
+  font-weight: 600;
+  color: var(--link-color);
+}
+.section-head h2{
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.service-item{
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+  padding: 2.5rem;
+  border-radius: 10px;
+  margin-top: 2rem;
+  /* position: relative; */
+  width: 95%;
+}
+.service-item i{
+  font-size: 4rem;
+  float: right;
+  /* position: absolute;
+  top: 2rem;
+  right: 10px; */
+  color: var(--primary-color);
+  margin-bottom: 2rem;
+  margin-right: -8%;
+}
+.services i:hover{
+  margin-top: 1rem;
+}
+.service-item h4{
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+}
+.service-item p{
+  color: var(--primary-color);
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media screen and (max-width: 768px){
+  
+  .service-item{
+    padding: 1.5rem;
+    width: 100%;
+    height: auto;
+  }
+  .service-item i{
+    float: none;
+    margin-right: 0;
+    margin-bottom: 1rem;
+  }
+}
+
+.banner{
+  width: 100vw;
+  height: auto;
+  background-image: url(./assets/banner-bg.jpeg);
+  background-size: cover;
+  /* display: flex; */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+  /* gap: 10rem; */
+  align-items: center;
+  padding: 5rem 2rem;
+  margin-top: 2rem;
+}
+.banner h2{
+  color: var(--bg-color);
+  text-align: center;
+  font-weight: 700;
+  margin-right: 10rem;
+}
+.banner h2 em:first-of-type{
+  font-style: normal;
+  color: var(--primary-color);
+}
+.banner h2 em:last-of-type{
+  font-style: normal;
+  color: var(--secondary-color);
+}
+
+.button-sec{
+  display: flex;
+  gap: 5rem;
+  margin-left: 10rem;
+}
+.button{
+  width: 10rem;
+  padding: .8rem 1.1rem;
+  border-radius: 5px;
+  border: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+#btn1{
+  background-color: var(--bg-color);
+  color: var(--primary-color);
+}
+#btn2{
+  background-color: var(--primary-color);
+  color: var(--bg-color);
 }
