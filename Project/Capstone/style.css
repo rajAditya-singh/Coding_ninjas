@@ -165,10 +165,10 @@ header {
   }
 }
 @media screen and (max-width: 576px) {
-  .title  {
+  .title {
     padding: 5rem 0;
   }
-  
+
   .divider {
     display: none;
   }
@@ -177,21 +177,21 @@ header {
   }
 }
 
-.section-head{
+.section-head {
   text-align: center;
   margin-top: 2rem;
   /* margin-bottom: 5rem; */
 }
-.section-head h5{
+.section-head h5 {
   font-weight: 600;
   color: var(--link-color);
 }
-.section-head h2{
+.section-head h2 {
   font-weight: 600;
   font-size: 2.5rem;
 }
 
-.service-item{
+.service-item {
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
   padding: 2.5rem;
   border-radius: 10px;
@@ -199,7 +199,7 @@ header {
   /* position: relative; */
   width: 95%;
 }
-.service-item i{
+.service-item i {
   font-size: 4rem;
   float: right;
   /* position: absolute;
@@ -209,80 +209,151 @@ header {
   margin-bottom: 2rem;
   margin-right: -8%;
 }
-.services i:hover{
+.services i:hover {
   margin-top: 1rem;
 }
-.service-item h4{
+.service-item h4 {
   font-size: 1.4rem;
   font-weight: 600;
   margin-bottom: 1.25rem;
 }
-.service-item p{
+.service-item p {
   color: var(--primary-color);
   font-size: 1rem;
   line-height: 1.5rem;
 }
-@media screen and (max-width: 768px){
-  
-  .service-item{
+@media screen and (max-width: 768px) {
+  .service-item {
     padding: 1.5rem;
     width: 100%;
     height: auto;
   }
-  .service-item i{
+  .service-item i {
     float: none;
     margin-right: 0;
     margin-bottom: 1rem;
   }
 }
 
-.banner{
-  width: 100vw;
-  height: auto;
+.banner {
+  /* width: 100vw; */
+  /* height: 50vh; */
   background-image: url(./assets/banner-bg.jpeg);
   background-size: cover;
-  /* display: flex; */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  justify-content: space-between;
-  /* gap: 10rem; */
-  align-items: center;
-  padding: 5rem 2rem;
   margin-top: 2rem;
+  padding-top: 7vw;
+  padding-bottom: 7vw;
 }
-.banner h2{
+.banner h4 {
   color: var(--bg-color);
-  text-align: center;
   font-weight: 700;
-  margin-right: 10rem;
+  font-size: 2.25rem;
+  margin-left: 2rem;
+  line-height: 3rem;
+  text-align: center;
 }
-.banner h2 em:first-of-type{
-  font-style: normal;
-  color: var(--primary-color);
-}
-.banner h2 em:last-of-type{
-  font-style: normal;
+.banner h4 em:first-of-type {
   color: var(--secondary-color);
+  font-style: normal;
+}
+.banner h4 em:last-of-type {
+  color: var(--link-color);
+  font-style: normal;
 }
 
-.button-sec{
+.buttons {
   display: flex;
-  gap: 5rem;
-  margin-left: 10rem;
+  justify-content: center;
+  gap: 3rem;
 }
-.button{
-  width: 10rem;
-  padding: .8rem 1.1rem;
-  border-radius: 5px;
-  border: none;
-  font-size: 0.9rem;
+.btn {
+  padding: 0.4rem 1.2rem;
+}
+.btn1 {
+  background-color: var(--bg-color);
+}
+.btn1 a {
+  text-decoration: none;
+  color: var(--link-color);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.btn2 {
+  background-color: var(--link-color);
+}
+.btn2 a {
+  text-decoration: none;
+  color: var(--bg-color);
+  font-weight: 500;
+  transition: all 0.3s;
+}
+.btn a{
+  transition: all 0.3s;
+}
+.btn a:hover{
+  opacity: 0.9;
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 992px) {
+  .banner h4 {
+    margin-bottom: 2rem;
+  }
+}
+
+/* About Section  */
+
+.about_us{
+  margin-top: 3%;
+  text-align: center;
+}
+.section-heading{
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.section-heading h6{
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-transform: uppercase;
+}
+.section-heading h4{
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--dark-bg-color);
+  text-transform: capitalize;
+  /* margin-bottom: 1rem; */
+}
+.details_btn{
+  text-align: center;
+}
+.details_btn span{
+  font-weight: 500;
+}
+.list-head{
+  font-weight: 700;
+}
+.course_list{
+  margin-top: 2rem;
+  list-style: none;
+  padding: 0;
+}
+.course_list li{
+  display: flex;
+  padding: 1rem;
+}
+.course_list li span{
+  flex: 1;
+  font-size: 1rem;
+  color: var(--text-color);
+}
+.item-title{
+  color: var(--secondary-color) !important;
   font-weight: 600;
 }
-#btn1{
-  background-color: var(--bg-color);
-  color: var(--primary-color);
-}
-#btn2{
-  background-color: var(--primary-color);
-  color: var(--bg-color);
+
+@media screen and (max-width:576px)  {
+  .course_list li{
+    flex-direction: column;
+  }
 }
