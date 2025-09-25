@@ -205,7 +205,7 @@
     </div>
 
     <!-- About Section  -->
-     <div class="container-fluid">
+    <div class="container-fluid">
       <section id="About" class="row about_us">
         <div class="col-12">
           <div class="section-heading">
@@ -219,7 +219,9 @@
           </div>
 
           <ul class="course_list">
-            <li class="list-head bg-dark-subtle d-none d-sm-flex justify-content-between">
+            <li
+              class="list-head bg-dark-subtle d-none d-sm-flex justify-content-between"
+            >
               <span>Cource Title</span>
               <span>Duration</span>
               <span>Level</span>
@@ -252,16 +254,73 @@
           </ul>
         </div>
       </section>
-     </div>
+    </div>
 
-     <!-- form section  -->
-      <div class="container-fluid">
-        <section class="form row">
-          <div class="col-md-6 d-none d-md-block form-img">
-            <img src="./assets/pic.png" alt="img">
+    <!-- form section  -->
+    <div class="container-fluid">
+      <section class="form row">
+        <div class="col-md-5 d-none d-md-block form-img">
+          <img src="./assets/pic.png" alt="img" />
+        </div>
+        <div class="col-md-7 formsection">
+          <div class="section-heading mt-5">
+            <h6>Your Coding journey</h6>
+            <h4 class="text-white">Create a learning plan</h4>
           </div>
-          <div class="col-md-6"></div>
-        </section>
-      </div>
+          <div class="form row">
+            <div class="col-12 col-lg-6 mb-3">
+              <label for="name" class="form-label text-white fs-5 fw-semibold"
+                >Your Name</label
+              >
+              <input
+                type="text"
+                name="name"
+                class="form-control bg-secondary"
+                id="name"
+              />
+            </div>
+            <div class="col-12 col-lg-6 mb-3">
+              <label for="email" class="form-label text-white fs-5 fw-semibold"
+                >Your Email</label
+              >
+              <input
+                type="email"
+                name="email"
+                class="form-control bg-secondary"
+                id="email"
+              />
+            </div>
+            <div class="col-12 mb-3">
+              <label for="name" class="form-label text-white fs-5 fw-semibold"
+                >Learning Area</label
+              >
+              <input
+                type="text"
+                name="name"
+                class="form-control bg-secondary"
+                id="name"
+              />
+            </div>
+            <div class="col-12 mb-4">
+              <label for="name" class="form-label text-white fs-5 fw-semibold">Your Goal</label>
+              <select class="form-select bg-secondary text-white fs-6">
+                <option selected>Choose an Option</option>
+                <option value="Web Development Basics">
+                  Web Development Basics
+                </option>
+                <option value="Advance JavaScript">Advance JavaScript</option>
+                <option value="Full Stack Development">
+                  Full Stack Development
+                </option>
+                <option value="Data Structure">Data Structure</option>
+              </select>
+            </div>
+            <div class="text-center mb-4">
+              <button class="btn button_submit fw-bold" type="submit">Submit Now</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
   </body>
 </html>
