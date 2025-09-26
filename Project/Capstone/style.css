@@ -399,7 +399,7 @@ header {
   font-weight: 600;
 }
 
-@media screen and (max-width:576px) {
+@media screen and (max-width: 576px) {
   .course_list li {
     flex-direction: column;
   }
@@ -412,11 +412,6 @@ header {
   background: url(./assets/plan-bg.jpeg) center/cover no-repeat;
 }
 
-.form-img {
-  /* height: 100%; */
-  /* padding-top: 1rem; */
-}
-
 .form-img img {
   /* top: 10vh; */
   width: 100%;
@@ -424,53 +419,166 @@ header {
   object-fit: contain;
 }
 
-.formsection{
+.formsection {
   margin-top: 5rem;
   width: 40vw;
   /* margin: auto; */
   /* margin-right: auto; */
   /* margin-left: auto; */
 }
-.button_submit{
+.button_submit {
   background-color: var(--primary-color);
   /* text-align: center; */
   color: var(--bg-color);
 }
-@media screen and (max-width:768px) {
-  .formsection{
-  width: 90vw;
-  margin: auto;
+@media screen and (max-width: 768px) {
+  .formsection {
+    width: 90vw;
+    margin: auto;
+  }
+  .buttonSub {
+    text-align: center;
+  }
 }
-.buttonSub{
-  text-align: center;
-}
-}
-.testimonials{
+.testimonials {
   margin-top: 1%;
   width: 95%;
   margin-left: 1.7rem;
 }
-.testimonial_card{
+.testimonial_card {
   display: flex;
-  align-items: center;
-  margin: auto;
-  width: 75vw;
-  height: auto;
+  background-color: var(--bg-color);
   border: 2px solid rgb(241, 230, 230);
   box-shadow: 0 0 15px rgba(74, 13, 13, 0.1);
-  padding: 2.5rem;
-  border-radius: 20px;
+  padding: 2rem;
+  border-radius: 15px;
   margin: 2rem 0;
 }
-.content{
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
+.testimonial_card .content {
+  flex: 1;
 }
-.content i{
+.testimonial_card i {
   background-color: var(--link-color);
   border-radius: 10px;
-  font-size: 2.5rem;
-  padding: ;
+  font-size: 3vw;
+  padding: 0.6rem 0;
   color: var(--bg-color);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial_card p {
+  font-size: 1.4vw;
+  font-style: italic;
+  color: var(--text-color);
+  margin-bottom: 1.5rem;
+}
+
+.testimonial_card h4 {
+  font-size: 1.6vw;
+  font-weight: 600;
+  color: var(--dark-bg-color);
+  margin-bottom: 0.5rem;
+}
+.testimonial_card .subtitle {
+  font-size: 1.2vw;
+  color: var(--primary-color);
+}
+
+.img_container {
+  width: 20%;
+  /* overflow: hidden; */
+  border-radius: 10px;
+}
+.img_container img {
+  width: 100%;
+  /* height: 100%; */
+  object-fit: cover;
+}
+
+.carousel-control-prev {
+  left: -10%;
+}
+.carousel-control-next {
+  right: -10%;
+}
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1);
+}
+
+.map_container {
+  margin: auto;
+  position: relative; /* important: allows absolute children */
+  margin-bottom: ;
+}
+
+.map iframe {
+  border: 2px solid rgb(241, 230, 230);
+  width: 100%;
+  height: 60vh;
+}
+
+.card_container {
+  position: absolute;       /* overlap map */
+  bottom: -60px;            /* pushes cards partially outside */
+  left: 50%;                /* center horizontally */
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-evenly;
+  gap: 20px;
+  width: 90%;               /* so cards don’t stretch too wide */
+  z-index: 5;               /* make sure they’re above the map */
+}
+
+.card_container .cards {
+  flex: 1;
+  text-align: center;
+  padding: 1.5rem;
+  border-radius: 10px;
+  border: 2px solid rgb(241, 230, 230);
+  box-shadow: 0 0 15px rgba(74, 13, 13, 0.2);
+  background: #fff;         /* white background over map */
+}
+
+.card_container .cards i {
+  color: var(--secondary-color);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.card_container .cards h5 {
+  font-weight: 600;
+  margin-bottom: 0.7rem;
+}
+
+.card_container .cards p {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+@media (max-width: 768px) {
+  .card_container {
+    position: relative;
+    flex-direction: column;
+    
+    width: 95%;
+  }
+  
+  .card_container .cards {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+.footer{
+  background-color: var(--dark-bg-color);
+}
+.footer p{
+  color: var(--bg-color);
+  font-size: 0.8rem;
+  margin-top: 0.5rem;
+}
+.footer p:first-of-type{
+}
+.footer p:last-of-type em{
+  color: var(--primary-color);
 }
