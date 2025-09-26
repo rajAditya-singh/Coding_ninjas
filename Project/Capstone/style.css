@@ -575,10 +575,11 @@ header {
 .footer p{
   color: var(--bg-color);
   font-size: 0.8rem;
-  margin-top: 0.5rem;
 }
 .footer p:first-of-type{
+  margin-top: 1rem;
 }
 .footer p:last-of-type em{
   color: var(--primary-color);
+  font-style: normal;
 }
