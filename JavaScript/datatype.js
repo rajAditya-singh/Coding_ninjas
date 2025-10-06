@@ -80,5 +80,5 @@ answer = str1.toLowerCase().concat(str2.toLowerCase());
 
 const sen = "Hello, World!"
 const chartofind = 'o';
-const indexofchar = sen.indexOf(chartofind).toUpperCase().charAt(1);
-console.log(indexofchar)
+// const indexofchar = sen.indexOf(chartofind).toUpperCase().charAt(1);
+// console.log(indexofchar)
