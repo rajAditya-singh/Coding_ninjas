@@ -165,3 +165,60 @@ if (age >= 18) {
   console.log("not eligible - Age less than 18");
 }
 */
+/*
+// PROBLEM 16 : Take a number (1–7) and print the day of the week.
+
+let num = Number(prompt("Enter day of week"))
+switch(num){
+  case 1 : console.log("Monday")
+  break;
+  case 2 : console.log("Tuesday")
+  break;
+  case 3 : console.log("Webnesday")
+  break;
+  case 4 : console.log("Thrusday")
+  break;
+  case 5 : console.log("Friday")
+  break;
+  case 6 : console.log("Saturday")
+  break;
+  case 7 : console.log("Sunday")
+  break;
+  default : console.log("Invalid Input")
+}
+*/
+/*
+// PROBLEM 17 :	Simple calculator — take two numbers and an operator (+, -, *, /) and print the result.
+
+let num1 = Number(prompt("Enter 1st number"))
+let sign = prompt("enter sign")
+let num2 = Number(prompt("Enter 2nd number"))
+
+switch(sign){
+  case "+" : console.log(num1+num2)
+  break;
+  case "-" : console.log(num1-num2)
+  break;
+  case "*" : console.log(num1*num2)
+  break;
+  case "/" : console.log(num1/num2)
+  break;
+  default : console.log("invalid input")
+}
+*/
+
+// PROBLEM 18 : Print the season based on the month number.
+
+let num = Number(prompt("Enter Month"))
+
+switch(true){
+  case (num>=3 && num<=5) : console.log("Spring")
+  break;
+  case (num>=6 && num<=8) : console.log("Summer")
+  break;
+  case (num>=9 && num<=11) : console.log("Autumn")
+  break;
+  case (num==12 || (num>=1 && num<=2)) : console.log("Winter")
+  break;
+  default : console.log("Invalid Input")
+}
