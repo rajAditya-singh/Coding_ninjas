@@ -206,11 +206,10 @@ switch(sign){
   default : console.log("invalid input")
 }
 */
-
+/*
 // PROBLEM 18 : Print the season based on the month number.
 
 let num = Number(prompt("Enter Month"))
-
 switch(true){
   case (num>=3 && num<=5) : console.log("Spring")
   break;
@@ -222,3 +221,4 @@ switch(true){
   break;
   default : console.log("Invalid Input")
 }
+*/
