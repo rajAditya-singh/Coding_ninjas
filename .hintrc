@@ -18,7 +18,14 @@
         "dlitem": "off"
       }
     ],
-    "disown-opener": "off"
+    "disown-opener": "off",
+    "meta-viewport": "off",
+    "axe/language": [
+      "default",
+      {
+        "html-has-lang": "off"
+      }
+    ]
   },
   "browserslist": [
     "defaults",

@@ -84,7 +84,7 @@ if (year % 400 == 0) {
 */
 /*
 // PROBLEM 11 :
-//Grade a student: 90–100 → A / 75–89 → B / 60–74 → C / Below 60 → Fail 
+//Grade a student: 90–100 → A / 75–89 → B / 60–74 → C / Below 60 → Fail
 
 let marks=Number(prompt("Enter Your Marks"))
 switch(true){
@@ -222,3 +222,19 @@ switch(true){
   default : console.log("Invalid Input")
 }
 */
+
+//Create a JavaScript function called lastDigit that takes two numbers, num1 and num2, as arguments. The function should determine whether the last digit of both numbers is equal. If the last digits are equal, the function should return true; otherwise, it should return false.
+// function lastDigit(num1, num2) {
+//   return num1 % 10 === num2 % 10;
+// }
+
+//Develop a JavaScript function called commonDigits that accepts two positive integers, num1, and num2, as parameters. The function should determine whether the numbers have an equal number of digits or not. If they have an equal number of digits then store true in the answer else store false.
+function commonDigits(num1, num2) {
+  let answer;
+  if (String(num1).length === String(num2).length) {
+    answer = true;
+  } else {
+    answer = false;
+  }
+  return answer;
+}
