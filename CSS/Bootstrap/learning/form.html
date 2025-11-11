@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <form>
+      <div class="form-floating">
+          <input type="text" id="name" class="form-control" placeholder="Enter Username" />
+          <label class="form-label" for="name">Username: </label>
+        </div>
+      <label class="form-label" for="color">Color: </label>
+      <input type="color" id="color" class="form-control-color" />
+
+      <label class="form-label" for="range">Color: </label>
+      <input type="range" id="range" class="form-range" />
+
+      <select class="form-select">
+        <option value="Indian">Indian</option>
+        <option value="Outside">Outside</option>
+      </select>
+      <div class="form-switch form-check">
+        <input type="checkbox" id="checkbox" class="form-check-input" />
+        <label class="form-label" for="Check">Check: </label>
+      </div>
+
+      <br>
+      <div class="input-group mb-3">
+          <span class="input-group-text">$</span>
+          <input type="text" class="form-control" aria-label="Amount(To the nearest Dollor)" />
+          <span class="input-group-text">.00</span>
+        </div>
+        
+        <br>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </form> 
+    <form class="row g-3 needs-validation" novalidate>
+      <div class="col-md-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+
+        <input
+          type="text"
+          class="form-control is-invalid"
+          id="validationCustom@1"
+          required
+        />
+
+        <div class="invalid-feedback">Please enter a valid first name.</div>
+      </div>
+
+      <div class="col-md-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+
+        <input
+          type="text"
+          class="form-control is-valid"
+          id="validationCustom02"
+          required
+        />
+
+        <div class="valid-feedback">Looks good!</div>
+      </div>
+
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+      </div>
+    </form>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

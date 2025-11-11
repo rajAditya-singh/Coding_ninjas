@@ -1,0 +1,78 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #333;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+}
+
+.circle {
+  border-radius: 50%; 
+  /* Add animation properties here */
+  animation-name: bounce;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: both;
+}
+
+/* give effect by hovering over cicle class element below: */
+.circle:hover{
+    animation-play-state: paused;
+}
+
+.circle:nth-child(1) {
+  width: 30px;
+  height: 30px;
+  background-color: #ff6347; 
+}
+
+.circle:nth-child(2) {
+  width: 40px;
+  height: 40px;
+  background-color: #ffd700; 
+  /* Add animation property here */
+  animation-delay: 0.2s;
+}
+
+.circle:nth-child(3) {
+  width: 50px;
+  height: 50px;
+  background-color: #00ff7f; 
+  /* Add animation property here */
+  animation-delay: 0.4s;
+
+}
+
+.circle:nth-child(4) {
+  width: 40px;
+  height: 40px;
+  background-color: #87ceeb; 
+  /* Add animation property here */
+  animation-delay: 0.6s;
+}
+
+.circle:nth-child(5) {
+  width: 30px;
+  height: 30px;
+  background-color: #da70d6; 
+  /* Add animation property here */
+  animation-delay: 0.8s;
+}
+
+/* give @keyframes rule for animation name 'bounce' below: */
+@keyframes bounce{
+    from{
+        transform: translateY(0);
+    }
+    to{
+        transform: translateY(-100px);
+    }
+}

@@ -1,0 +1,75 @@
+/* Universal Selector */
+/* *{
+    margin: 10px;
+    padding: 0px;
+} */
+
+/* *******Descendent Combinator******* */
+/* a{
+    background-color: aqua;
+    outline: 1px solid black;
+    margin: 10px 10px;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: sans-serif;
+}
+img{
+    margin: 20px;
+}
+
+header a{
+    background-color: red; 
+} */
+
+
+
+/* Child Combinator */
+/* header > a{
+   background-color: aqua;
+    outline: 1px solid black;
+    margin: 10px 10px;
+    padding: 5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bolder;
+    font-family: sans-serif; 
+}
+img{
+    margin: 20px;
+} */
+
+
+
+/* Next-Sibling Combinator */
+/* h1 + p{
+    color: red;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+} */
+
+
+
+/* Sub Sequent-Sibling Combinator */
+/* h1 ~ p{
+    color: red;
+    letter-spacing: 1px;
+    font-weight: bold;
+    text-align: center;
+} */
+
+
+
+/* Code Problem 1 */
+/* .container .nested  span{
+    color: red;
+} */
+
+/* Code Problem 2 */
+/* .container p, div>span {
+    color: red;
+} */
+
+/* Code Problem 3 */

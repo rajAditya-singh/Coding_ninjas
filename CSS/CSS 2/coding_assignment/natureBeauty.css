@@ -1,0 +1,26 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#outer{
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(blue,  rgb(0, 128, 92));
+}
+#inner{
+    height: 100%;
+    width: 40%;
+    margin: auto;
+    background-color: white;
+}
+#content{
+    text-align: center;
+    padding: 10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#content > div:first-of-type{
+    width: 90%;
+    margin: auto;
+    background-color: antiquewhite;
+    filter: drop-shadow(3px 3px 3px );
+}

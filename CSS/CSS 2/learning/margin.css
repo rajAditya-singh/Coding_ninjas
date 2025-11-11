@@ -1,0 +1,21 @@
+#div1{
+    background-color: aqua;
+    width: 400px;
+    height: 100px;
+    /* margin: 0px 0px 20px; */
+    margin: 20px;
+    padding: 20px;
+    box-sizing: content-box;
+}
+#div2{
+    background-color: purple;
+    width: 300px;
+    height: 100px;
+    /* margin-top: 20px; */
+    /* margin: auto; */
+    
+}
+#para1{
+    border: 1px solid black;
+    padding: 20px;
+}

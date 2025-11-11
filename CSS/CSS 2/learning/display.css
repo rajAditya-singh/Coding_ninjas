@@ -1,0 +1,33 @@
+#div1{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* display: inline; */
+}
+#div2{
+    width: 100px;
+    height: 100px;
+    background-color: purple;
+    /* display: inline; */
+}
+span{
+    display: block;
+}
+/* p{
+    display: inline-block;
+    width: 500px;
+    margin:0px 50px;
+} */
+ #para1{
+    display: inline-block;
+    width: 45%;
+ }
+ #para2{
+    display: inline-block;
+    width: 45%;
+    margin-left: 20px;
+ }
+ .list1{
+    list-style-type: ;
+    list-style-position: outside;
+ }

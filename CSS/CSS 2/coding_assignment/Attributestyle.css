@@ -1,0 +1,23 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+[data-styled="true"]{
+    width: 100%;
+    margin-top: 10px;
+    border-collapse: collapse;
+}
+[data-styled="true"] th{
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+}
+[data-styled="true"] td{
+    border: 2px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    color: black;
+}

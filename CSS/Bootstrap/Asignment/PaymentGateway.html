@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <title>Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <style>
+      @media (max-width: 576px) {
+        .card-images img {
+          height: 250px;
+          object-fit: cover;
+          width: 100%;
+        }
+      }
+    </style>
+  </head>
+  <body class="container bg-black">
+    <div>
+      <nav>
+        <div class="container-fluid d-flex justify-content-between align-items-center bg-dark px-5">
+          <a class="fs-2 p-2 text-decoration-none text-white"
+            >Credit Card Company</a>
+          <div id="navbarSearch">
+            <form class="d-flex gap-1">
+              <input
+                type="search"
+                class="form-control"
+                placeholder="Search"
+                aria-label="Search"
+              />
+              <button
+                type="button"
+                class="btn btn-primary"
+                data-bs-toggle="modal"
+                data-bs-target="#searchModal"
+              >
+                Search
+              </button>
+            </form>
+          </div>
+        </div>
+      </nav>
+
+      <main class="container-fluid bg-dark text-white">
+        <h1 class="display-3 text-center text-white pt-4">Payment Gateway</h1>
+
+        <div class="row">
+          <div class="col-md-7 mt-5">
+            <h4 class="mb-3">Billing address</h4>
+            <form novalidate>
+              <div class="row mb-3">
+                <div class="col-6">
+                  <label class="form-label mb-0" for="firstName"
+                    >First name</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="firstName"
+                    placeholder=""
+                    value=""
+                    required
+                  />
+                </div>
+                <div class="col-6">
+                  <label class="form-label mb-0" for="lastName"
+                    >Last name</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="lastName"
+                    placeholder=""
+                    value=""
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label mb-0" for="username">Username</label>
+                <div class="input-group">
+                  <span class="input-group-text">@</span>
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="username"
+                    placeholder="Username"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label mb-0"
+                  >Email <span class="text-muted">(Optional)</span></label
+                >
+                <input
+                  class="form-control"
+                  type="email"
+                  id="email"
+                  placeholder="you@example.com"
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="address" class="form-label mb-0">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address"
+                  placeholder="1234 Main St"
+                  required
+                />
+              </div>
+
+              <div class="mb-3">
+                <label for="address2" class="form-label mb-0"
+                  >Address 2 <span class="text-muted">(Optional)</span></label
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  id="address2"
+                  placeholder="Apartment or suite"
+                />
+              </div>
+
+              <div class="row">
+                <div class="col-md-5 mb-3">
+                  <label for="country" class="form-label mb-0">Country</label>
+                  <select id="country" class="form-select" required>
+                    <option value="">Choose...</option>
+                    <option>United States</option>
+                  </select>
+                </div>
+                <div class="col-md-4 mb-3">
+                  <label for="state" class="form-label mb-0">State</label>
+                  <select id="state" class="form-select" required>
+                    <option value="">Choose...</option>
+                    <option>California</option>
+                  </select>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="zip" class="form-label mb-0">Zip</label>
+                  <input
+                    type="text"
+                    id="zip"
+                    class="form-control"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+
+              <hr class="mb-4" />
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="same-address"
+                />
+                <label class="form-label" for="same-address"
+                  >Shipping address is the same as my billing address</label
+                >
+              </div>
+
+              <div class="form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="save-info"
+                />
+                <label for="save-info" class="form-label"
+                  >Save this information for next time</label
+                >
+              </div>
+
+              <hr class="mb-4" />
+
+              <h4 class="mb-3">Payment</h4>
+
+              <div class="my-3">
+                <div class="form-check">
+                  <input
+                    id="credit"
+                    class="form-check-input"
+                    name="paymentMethod"
+                    type="radio"
+                    checked
+                    required
+                  />
+                  <label class="form-label" for="credit">Credit card</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    id="debit"
+                    name="paymentMethod"
+                    type="radio"
+                    required
+                  />
+                  <label class="form-label" for="debit">Debit card</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    id="paypal"
+                    class="form-check-input"
+                    name="paymentMethod"
+                    type="radio"
+                    required
+                  />
+                  <label class="form-label" for="paypal">PayPal</label>
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <label class="mb-0 form-label" for="cc-name"
+                    >Name on card</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="cc-name"
+                    placeholder=""
+                    required
+                  />
+                  <small class="text-muted"
+                    >Full name as displayed on card</small
+                  >
+                </div>
+
+                <div class="col-6">
+                  <label class="mb-0 form-label" for="cc-number"
+                    >Credit card card number</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="cc-number"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="row">
+                <div class="col-6">
+                  <label class="form-label mb-0" for="cc-expiration"
+                    >Expiration</label
+                  >
+                  <input
+                    class="form-control"
+                    type="text"
+                    id="cc-expiration"
+                    placeholder=""
+                    required
+                  />
+                </div>
+                <div class="col-6">
+                  <label class="form-label mb-0" for="cc-cvv">CVV</label>
+                  <input
+                    type="text"
+                    id="cc-cvv"
+                    class="form-control"
+                    placeholder=""
+                    required
+                  />
+                </div>
+              </div>
+
+              <hr class="mb-4" />
+
+              <button class="btn btn-primary w-100 mb-5" type="submit">
+                Continue to checkout
+              </button>
+            </form>
+          </div>
+
+          <aside class="col-md-5 mt-5">
+            <h4 class="d-flex justify-content-between">
+              <span class="text-white">Your cart</span>
+              <span class="bg-secondary px-3 py-2 rounded-5 fs-5">3</span>
+            </h4>
+            <ul class="bg-white text-black list-unstyled rounded-2">
+              <li class="d-flex justify-content-between pe-3 ps-3 py-2">
+                <div>
+                  <h6 class="my-0">Product name</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$12</span>
+              </li>
+              <hr class="my-0" />
+              <li class="d-flex justify-content-between px-3 py-2">
+                <div>
+                  <h6 class="my-0">Second product</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$8</span>
+              </li>
+              <hr class="my-0" />
+              <li class="d-flex justify-content-between px-3 pt-2 py-2">
+                <div>
+                  <h6 class="my-0">Third item</h6>
+                  <small class="text-muted">Brief description</small>
+                </div>
+                <span class="text-muted">$5</span>
+              </li>
+              <hr class="my-0" />
+              <li class="d-flex justify-content-between px-3 py-2">
+                <div class="text-success fw-bold">
+                  <h6 class="my-0">Promo code</h6>
+                  <small>EXAMPLECODE</small>
+                </div>
+                <span class="text-success fw-bold">-$5</span>
+              </li>
+
+              <li
+                class="bg-dark text-white border rounded-bottom-2 py-2 px-3 d-flex justify-content-between"
+              >
+                <span>Total (USD)</span>
+                <strong>$20</strong>
+              </li>
+            </ul>
+
+            <form class="bg-white p-2 rounded-2 mb-5">
+              <div class="input-group">
+                <input
+                  class="form-control"
+                  type="text"
+                  placeholder="Promo code"
+                />
+                <button
+                  class="btn btn-secondary"
+                  data-bs-toggle="modal"
+                  data-bs-target="#redeemModal"
+                  type="button"
+                >
+                  Redeem
+                </button>
+              </div>
+            </form>
+
+            <section class="card-images d-flex flex-column align-items-center">
+              <figure>
+                <img
+                  class="rounded-3"
+                  src="./visa.jpeg"
+                  alt="Placeholder Image"
+                  width="300px"
+                />
+              </figure>
+              <figure>
+                <img
+                  class="rounded-4"
+                  src="./master.jpeg"
+                  alt="Placeholder Image"
+                  width="300px"
+                />
+              </figure>
+              <figure class="text-center">
+                <img
+                  class="rounded-3"
+                  src="./debit.jpeg"
+                  width="300px"
+                  alt="Placeholder Image"
+                />
+              </figure>
+            </section>
+          </aside>
+        </div>
+      </main>
+
+      <footer class="container-fluid bg-dark p-5">
+        <p class="mb-1 text-white text-center">&copy; 2017-2019 Company Name</p>
+        <ul class="d-flex justify-content-center gap-2">
+          <li><a href="#">Privacy</a></li>
+          <li><a href="#">Terms</a></li>
+          <li><a href="#">Support</a></li>
+        </ul>
+      </footer>
+    </div>
+
+    <!-- Search Modal -->
+    <div
+      class="modal fade"
+      id="searchModal"
+      tabindex="-1"
+      aria-labelledby="searchModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered text-dark">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="searchModalLabel">
+              Search Information
+            </h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              type="button"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Please enter your search query to find relevant information.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              type="button"
+            >
+              Close
+            </button>
+            <button class="btn btn-primary" type="button">Search Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Redeem Modal -->
+    <div
+      id="redeemModal"
+      tabindex="-1"
+      aria-labelledby="redeemModalLabel"
+      aria-hidden="true"
+      class="modal fade"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="redeemModalLabel">Redeem Promo Code</h5>
+            <button
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+              type="button"
+            ></button>
+          </div>
+          <div class="modal-body">
+            Please enter your promo code to redeem your offer.
+          </div>
+          <div class="modal-footer">
+            <button
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+              type="button"
+            >
+              Close
+            </button>
+            <button class="btn btn-primary" type="button">Redeem</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Alerts Example -->
+    <div
+      class="alert alert-warning alert-dismissible fade show bg-warning-subtle p-3 rounded-2 d-flex justify-content-between"
+      role="alert"
+    >
+      <p class="text-black my-auto">
+        <strong>Warning!</strong> Please ensure all fields are correctly filled
+        before submitting the form.
+      </p>
+      <button
+        class="btn-close my-auto"
+        data-bs-dismiss="alert"
+        aria-label="Close"
+        type="button"
+      ></button>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

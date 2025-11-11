@@ -1,0 +1,22 @@
+.outer{
+    width: 80vh;
+    height: 80vh;
+    background: blue url(../../Project/Multimedia/Web_development.jpg) no-repeat center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    /* filter: drop-shadow(10px 10px 20px); */
+    /* filter: blur(1px); */
+    /* filter: opacity(.5); */
+
+}
+
+.inner{
+    background-color: rgba(255, 255, 255, .3);
+    /* backdrop-filter: sepia(100%); */
+    /* backdrop-filter: blur(10px); */
+    /* backdrop-filter: invert(80%); */
+    margin: auto;
+    padding: 20px;
+    font-weight: bolder;
+}

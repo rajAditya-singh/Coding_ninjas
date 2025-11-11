@@ -1,0 +1,104 @@
+body {
+  font-family: "Arial", sans-serif;
+  background-color: #f0f0f0;
+  text-align: center;
+  margin: 0px;
+  padding: 0px;
+}
+
+/* Give styling to navbar and links inside it below */
+.navbar{
+    background-color: #333;
+    padding: 10px;
+}
+a{
+    margin: 0px 15px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+header {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+}
+
+.room {
+  border-width: 3px;
+  border-style: solid;
+  border-color: #3498db;
+  border-radius: 10px;
+  padding: 15px;
+  margin: 20px;
+  background-color: #ffffff;
+  text-align: left;
+  width: 300px;
+  display: inline-block;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 10px;
+}
+
+.reservation-form {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  border-radius: 10px; 
+  margin: 20px; 
+}
+
+#headingForm {
+  margin-bottom: 20px;
+}
+
+input {
+  width: 100%; 
+  padding: 10px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: 1px solid #3498db;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #0008ee;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.pricing {
+  padding: 10px;
+  margin: 20px;
+}
+
+#price {
+  margin-bottom: 20px;
+  color: #2980b9;
+}
+
+.price-table {
+  width: 80%;
+  margin: 0 auto;
+  border-collapse: collapse;
+}
+
+th,
+td {
+  border: 2px solid #ddd;
+  padding: 15px;
+}
+
+th {
+  background-color: #2980b9;
+  color: white;
+}
+
+td {
+  background-color: #fff;
+}
