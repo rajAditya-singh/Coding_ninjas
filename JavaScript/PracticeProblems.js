@@ -229,12 +229,21 @@ switch(true){
 // }
 
 //Develop a JavaScript function called commonDigits that accepts two positive integers, num1, and num2, as parameters. The function should determine whether the numbers have an equal number of digits or not. If they have an equal number of digits then store true in the answer else store false.
-function commonDigits(num1, num2) {
-  let answer;
-  if (String(num1).length === String(num2).length) {
-    answer = true;
-  } else {
-    answer = false;
-  }
-  return answer;
+// function commonDigits(num1, num2) {
+//   let answer;
+//   if (String(num1).length === String(num2).length) {
+//     answer = true;
+//   } else {
+//     answer = false;
+//   }
+//   return answer;
+// }
+
+//complete the reverseString Function.
+//Do not alter the starter Code.
+function reverseString(str) {
+  //Implement Your function here
+  let reversed = "";
 }
+console.log(reverseString("Hello"));
+//Output : "olleH"
