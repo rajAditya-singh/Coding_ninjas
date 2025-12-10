@@ -21,16 +21,16 @@
 // print()
 
 // //Block Scope
-// {
-//     var varBlock = 10;
-//     let letBlock = 20
-//     const constBlock = 30
-//     console.log(letBlock)
-//     console.log(constBlock)
-// }
-// console.log(varBlock)
-// console.log(letBlock)
-// console.log(constBlock)
+{
+    var varBlock = 10;
+    let letBlock = 20
+    const constBlock = 30
+    // console.log(letBlock)
+    // console.log(constBlock)
+}
+console.log(varBlock)
+console.log(letBlock)
+console.log(constBlock)
 
 // var a = 10
 // function foo() {

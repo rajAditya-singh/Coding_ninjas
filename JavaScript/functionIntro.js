@@ -1,5 +1,5 @@
 //FUNCTION DECLARATION  // we can call this function before declaring it
-const sum1 = sum(2, 4)
+// const sum1 = sum(2, 4)
 // console.log(sum1)
 function sum(a, b) {
     return a + b
@@ -30,12 +30,11 @@ var prod = (num1, num2) => {
 var prod2 = (num1, num2) => num1 * num2
 // console.log(prod2(4, 6))
 
-//ARGUMENT OBJECT IN ARROW FUNCTION -  it is not present in arrow functions Because arrow functions do NOT have their own arguments 
-//object so JavaScript doesn't know what arguments refers to here.
+//ARGUMENT OBJECT IN ARROW FUNCTION -  it is not present in arrow functions Because arrow functions do NOT have their own arguments object so JavaScript doesn't know what arguments refers to here.
 let he = 24
 let she = 2
 let ration = () => {
     console.log(arguments)
     return he / she
 }
-console.log(ration(he, she))
+// console.log(ration(he, she))
