@@ -33,4 +33,4 @@ console.log(cube(3))
 console.log(cube(5))
 console.log(cube(4))
 
-// In simple words, Currying is 
+// In simple words, Currying is a technique of evaluating function with multiple arguments, into sequence of functions with single argument.
