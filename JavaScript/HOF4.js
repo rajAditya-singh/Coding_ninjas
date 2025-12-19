@@ -14,7 +14,7 @@ const find4 = numbers.findIndex((num) => num == -2);
 // console.log(find4); // Output: -1
 
 /************************************ */
-// few other HOF - every, fill, findLast, findLastIndex, forEach and many more.
+// few other HOF - every, fill, findLast, findLastIndex, forEach, sort and many more.
 
 /************************************ */
 //Every()
