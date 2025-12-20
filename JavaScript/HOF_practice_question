@@ -1,0 +1,38 @@
+// Do not alter the starter code
+
+const orders = [
+  {
+    orderNumber: 1,
+    items: [
+      { name: "Cappuccino", price: 3.5 },
+      { name: "Chocolate Croissant", price: 2.5 }
+    ]
+  },
+  {
+    orderNumber: 2,
+    items: [
+      { name: "Latte", price: 4.0 },
+      { name: "Blueberry Muffin", price: 2.75 }
+    ],
+    discountCode: "COFFEELOVER"
+  }
+];
+
+// Function to calculate the total value of all orders
+// Apply discounts if applicable
+function totalOrderValue(orders, applyDiscount) {
+  // Map over each order to calculate its total value
+  // Use the reduce method to sum the prices of all items in the order
+  // Check if a discountCode is present and apply the discount using the provided callback function
+
+  // Your implementation should:
+  // 1. Calculate the total value for each order
+  // 2. Apply the discount (if any) using the applyDiscount callback
+  // 3. Sum up the totals for all orders
+  // 4. Return the final grand total rounded to 2 decimal places
+}
+
+//Below is the callback function to calculate the discount
+const applyDiscount = (discountCode, total) => {
+  // Implement discount logic here
+};
