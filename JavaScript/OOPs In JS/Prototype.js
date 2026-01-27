@@ -12,6 +12,8 @@ const movie2 = new Movie("Inception")
 // console.log(movie2)
 
 // console.log(movie1.__proto__)
+console.log(movie2.__proto__)
+console.log(movie2.__proto__.__proto__)
 console.log(movie2.__proto__.__proto__.__proto__)
 
 
