@@ -17,13 +17,9 @@ const movie2 = new Movie("Inception");
 // console.log(movie2)
 
 // console.log(movie1.__proto__)
-<<<<<<< HEAD
 console.log(movie2.__proto__)
 console.log(movie2.__proto__.__proto__)
 console.log(movie2.__proto__.__proto__.__proto__)
-=======
-// console.log(movie2.__proto__.__proto__.__proto__)
->>>>>>> d70521a4bc39be745da3b967cc7f9191fa938a33
 
 function Game(name, platform) {
   this.name = name;
