@@ -30,7 +30,7 @@ class VehicleClass {
   }
 
   //methods
-  getDetails() {
+  getDetails() { 
     console.log(
       `name:${this.name}, color:${this.color}, wheels:${this.wheels}`,
     );
