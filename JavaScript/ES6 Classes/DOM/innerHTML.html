@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="my-content">hello</div>
+    
+    <script>
+        let element = document.querySelector(".my-content")
+        console.log(element)
+        let content = element.innerHTML
+        console.log(content)
+        element.innerHTML="Hello, My name is Aditya"
+        let newContent = element.innerHTML;
+        console.log(newContent);
+    </script>
+</body>
+</html>
