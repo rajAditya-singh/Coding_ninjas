@@ -21,4 +21,3 @@ para.textContent =
   "Hey my name is Aditya raj Singh and i am a softerware developer";
 div2.appendChild(para);
 console.log(para);
-
