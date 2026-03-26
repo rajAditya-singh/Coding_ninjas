@@ -44,4 +44,7 @@ tempDiv.innerHTML=elements;
 //     parent.append(child)
 // });
 // console.log(...tempDiv.children);
-parent.append(...tempDiv.children)
+// parent.append(...tempDiv.children)
+// parent.append("Hello")
+// parent.appendChild("Heloow")// Error: Failed to execute 'appendChild' on 'Node': parameter 1 is not of type 'Node'.
+parent.appendChild(document.createTextNode("Hello"));
