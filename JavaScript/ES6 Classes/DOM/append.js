@@ -18,3 +18,6 @@ childElement2.textContent = "Hello I am a child element 2";
 parentElement.append(childElement1, childElement2);
 console.log(childElement1);
 console.log(childElement2);
+
+// Remove() method is used to remove an element from the DOM. It takes no arguments and removes the element from the DOM.
+document.querySelector("#first").remove();
