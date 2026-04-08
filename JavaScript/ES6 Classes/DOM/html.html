@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>pageY vs clientY Demo</title>
+</head>
+<body>
+<div id="box" style="width:300px;height:200px;background:#90caf9;margin:50px;padding:20px;">
+Move your mouse inside this box!
+<div id="coords" style="margin-top:10px;">``</div></div>
+<div id="output" style="position:fixed;top:10px;left:10px;background:#eee;padding:10px;z-index:1000;">
+Move your mouse and scroll the page!
+</div>
+<div style="height:2000px;">``</div>
+
+<script>
+document.addEventListener('mousemove', function(e) {
+document.getElementById('output').innerText =
+'pageY: ' + e.pageY + ' | clientY: ' + e.clientY + '| screenY : ' + e.screenY;
+});
+
+document.getElementById('box').addEventListener('mousemove', function(e) {
+document.getElementById('coords').innerText =
+'offsetX: ' + e.offsetX + ' | offsetY: ' + e.offsetY;
+});
+</script>
+</body>
+</html>
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+<title>offsetX and offsetY Demo</title>
+</head>
+<body>
+<div id="box" style="width:300px;height:200px;background:#90caf9;margin:50px;padding:20px;">
+Move your mouse inside this box!
+<div id="coords" style="margin-top:10px;">``</div>
+</div>
+<script>
+document.getElementById('box').addEventListener('mousemove', function(e) {
+document.getElementById('coords').innerText =
+'offsetX: ' + e.offsetX + ' | offsetY: ' + e.offsetY;
+});
+</script>
+</body>
+</html> -->
