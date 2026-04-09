@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div
+      id="box"
+      draggable="true"
+      style="
+        width: 100px;
+        height: 100px;
+        background: orange;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+      "
+    >
+      Drag me
+    </div>
+
+    <script>
+      let box = document.getElementById("box");
+      box.addEventListener("dragstart", function (e) {
+        e.dataTransfer.setData("text/plain", null); // Required for Firefox
+      });
+      box.addEventListener("drag", function (e) {
+        if (e.clientX && e.clientY) {
+          box.style.left = e.clientX + "px";
+          box.style.top = e.clientY + "px";
+        }
+      });
+    </script>
+  </body>
+</html>
