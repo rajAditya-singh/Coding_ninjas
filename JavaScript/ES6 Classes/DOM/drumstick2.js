@@ -6,6 +6,12 @@ for (let i = 0; i < noOfDrumButtons; i++) {
     makeSound(buttonInnerHTML);
   });
 }
+
+//Using keys
+document.addEventListener("keypress", function (event) {
+  makeSound(event.key);
+});
+
 function makeSound(key) {
   switch (key) {
     case "w":
@@ -44,7 +50,7 @@ function makeSound(key) {
       break;
 
     default:
-      console.log(buttonInnerHTML);
+      // console.log(buttonInnerHTML);
       break;
   }
 }
