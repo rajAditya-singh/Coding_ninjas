@@ -35,12 +35,18 @@ seats.forEach((seat, i) => {
       seat.style.backgroundColor = seat.classList.contains("selected")
         ? "lightgreen"
         : "";
-      // if (seat.classList.contains("selected")) {
-      //   console.log(i+1);
-      // }
       document.getElementById("numberOfSeat").textContent =
-      document.querySelectorAll(".seat.selected").length - 1;
-      document.getElementById("totalPrice").textContent= ;
+        document.querySelectorAll(".seat.selected").length - 1;
+      let totalPrice =
+        (document.querySelectorAll(".seat.selected").length - 1) *
+        parseFloat(price.textContent.slice(2));
+      document.getElementById("totalPrice").textContent = "$ " + totalPrice;
+
+      let selectedSeateHolder = document.getElementById("selectedSeatsHolder");
+      selectedSeateHolder.textContent = [];
+      document.querySelectorAll(".seat.selected").forEach((seat) => {
+        selectedSeateHolder.textContent = i;
+      });
     }
   });
 });
