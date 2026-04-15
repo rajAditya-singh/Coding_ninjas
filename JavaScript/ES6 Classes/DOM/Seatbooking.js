@@ -26,6 +26,24 @@ dropDown.addEventListener("change", (e) => {
   }
 });
 
+const seats = document.querySelectorAll("#seatCont .seat");
+// console.log(seats);
+seats.forEach((seat, i) => {
+  seat.addEventListener("click", function () {
+    if (!seat.classList.contains("occupied")) {
+      seat.classList.toggle("selected");
+      seat.style.backgroundColor = seat.classList.contains("selected")
+        ? "lightgreen"
+        : "";
+      // if (seat.classList.contains("selected")) {
+      //   console.log(i+1);
+      // }
+      document.getElementById("numberOfSeat").textContent =
+      document.querySelectorAll(".seat.selected").length - 1;
+      document.getElementById("totalPrice").textContent= ;
+    }
+  });
+});
 //Add eventLister to each unoccupied seat
 //Add eventLsiter to continue Button
 //Add eventListerner to Cancel Button
