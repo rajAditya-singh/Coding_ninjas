@@ -37,10 +37,11 @@ seats.forEach((seat, i) => {
         ? "lightgreen"
         : "";
 
-      const noOfSeats = document.getElementById("numberOfSeat")
-      noOfSeats.textContent =document.querySelectorAll(".seat.selected").length - 1;
+      const noOfSeats = document.getElementById("numberOfSeat");
+      noOfSeats.textContent =
+        document.querySelectorAll(".seat.selected").length - 1;
 
-      const seatid = i+1;
+      const seatid = i + 1;
       if (seat.classList.contains("selected")) {
         selectedSeats.push(seatid);
       } else {
@@ -49,39 +50,51 @@ seats.forEach((seat, i) => {
 
       let seatHolder = document.getElementById("selectedSeatsHolder");
       seatHolder.innerHTML = "";
-      selectedSeats.forEach((id)=>{
-        const takenSeat = document.createElement("div")
-        takenSeat.classList.add("selectedSeat")
-        takenSeat.innerHTML=id;
-        seatHolder.appendChild(takenSeat)
-      })
+      selectedSeats.forEach((id) => {
+        const takenSeat = document.createElement("div");
+        takenSeat.classList.add("selectedSeat");
+        takenSeat.innerHTML = id;
+        seatHolder.appendChild(takenSeat);
+      });
 
-      let totalPrice = noOfSeats.textContent * parseFloat(price.textContent.slice(2));
+      let totalPrice =
+        noOfSeats.textContent * parseFloat(price.textContent.slice(2));
       document.getElementById("totalPrice").textContent = "$ " + totalPrice;
     }
   });
 });
 let proceedBtn = document.getElementById("proceedBtn");
 proceedBtn.addEventListener("click", function () {
-  if(selectedSeats.length > 0){
+  if (selectedSeats.length > 0) {
     alert("Yayy! Your Seats have been booked.");
-  }else{
-    alert("Oops no seat Selected.")
+    document.querySelectorAll(".seat.selected").forEach((seat) => {
+      seat.classList.remove("selected");
+      seat.classList.add("occupied");
+      seat.style.backgroundColor = "";
+      document.getElementById("numberOfSeat").textContent = 0;
+
+      document.getElementById("totalPrice").textContent = "$ " + 0;
+      document.getElementById("selectedSeatsHolder").innerHTML =
+        "<div class='noSelected'>No Seat Selected</div>";
+    });
+  } else {
+    alert("Oops no seat Selected.");
   }
 });
 
 let cancelBtn = document.getElementById("cancelBtn");
-cancelBtn.addEventListener("click", function(){
-  document.querySelectorAll(".seat.selected").forEach((seat)=>{
-    seat.classList.remove("selected")
-    seat.classList.add("occupied")
-    seat.style.backgroundColor = "#bdbdbd";
-    document.getElementById("numberOfSeat").textContent= 0
+cancelBtn.addEventListener("click", function () {
+  selectedSeats = [];
+  document.querySelectorAll(".seat.selected").forEach((seat) => {
+    seat.classList.remove("selected");
+    // seat.classList.add("occupied");
+    seat.style.backgroundColor = "";
+    document.getElementById("numberOfSeat").textContent = 0;
     document.getElementById("totalPrice").textContent = "$ " + 0;
-    let noSelected=document.querySelector(".noSelected")
-    document.getElementById("selectedSeatsHolder").innerHTML = noSelected.innerHTML;
-  })
-})
+    document.getElementById("selectedSeatsHolder").innerHTML =
+      "<div class='noSelected'>No Seat Selected</div>";
+  });
+});
 //Add eventLister to each unoccupied seat
 //Add eventLsiter to continue Button
 //Add eventListerner to Cancel Button
