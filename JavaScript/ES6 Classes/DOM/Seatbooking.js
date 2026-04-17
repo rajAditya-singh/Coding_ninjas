@@ -26,20 +26,17 @@ dropDown.addEventListener("change", (e) => {
   }
 });
 
-const seats = document.querySelectorAll("#seatCont .seat");
+const seats = document.querySelectorAll("#seatCont .seat:Not(.legend)");
 // console.log(seats);
 let selectedSeats = [];
 seats.forEach((seat, i) => {
   seat.addEventListener("click", function () {
     if (!seat.classList.contains("occupied")) {
       seat.classList.toggle("selected");
-      seat.style.backgroundColor = seat.classList.contains("selected")
-        ? "lightgreen"
-        : "";
-
-      const noOfSeats = document.getElementById("numberOfSeat");
-      noOfSeats.textContent =
-        document.querySelectorAll(".seat.selected").length - 1;
+      
+      const selectedSeatsLength = document.querySelectorAll(".seat.selected:Not(.legend)").length;
+      document.getElementById("numberOfSeat").textContent = selectedSeatsLength;
+      document.getElementById("totalPrice").textContent ="$" + (selectedSeatsLength * parseFloat(price.textContent.slice(2)));
 
       const seatid = i + 1;
       if (seat.classList.contains("selected")) {
@@ -56,10 +53,6 @@ seats.forEach((seat, i) => {
         takenSeat.innerHTML = id;
         seatHolder.appendChild(takenSeat);
       });
-
-      let totalPrice =
-        noOfSeats.textContent * parseFloat(price.textContent.slice(2));
-      document.getElementById("totalPrice").textContent = "$ " + totalPrice;
     }
   });
 });
@@ -67,16 +60,15 @@ let proceedBtn = document.getElementById("proceedBtn");
 proceedBtn.addEventListener("click", function () {
   if (selectedSeats.length > 0) {
     alert("Yayy! Your Seats have been booked.");
+    
     document.querySelectorAll(".seat.selected").forEach((seat) => {
       seat.classList.remove("selected");
       seat.classList.add("occupied");
       seat.style.backgroundColor = "";
-      document.getElementById("numberOfSeat").textContent = 0;
-
-      document.getElementById("totalPrice").textContent = "$ " + 0;
-      document.getElementById("selectedSeatsHolder").innerHTML =
-        "<div class='noSelected'>No Seat Selected</div>";
     });
+    selectedSeats = [];
+    resetUI();
+
   } else {
     alert("Oops no seat Selected.");
   }
@@ -87,14 +79,17 @@ cancelBtn.addEventListener("click", function () {
   selectedSeats = [];
   document.querySelectorAll(".seat.selected").forEach((seat) => {
     seat.classList.remove("selected");
-    // seat.classList.add("occupied");
     seat.style.backgroundColor = "";
-    document.getElementById("numberOfSeat").textContent = 0;
-    document.getElementById("totalPrice").textContent = "$ " + 0;
-    document.getElementById("selectedSeatsHolder").innerHTML =
-      "<div class='noSelected'>No Seat Selected</div>";
   });
+  resetUI();
 });
+
+function resetUI() {
+  document.getElementById("numberOfSeat").textContent = 0;
+  document.getElementById("totalPrice").textContent = "$ " + 0;
+  document.getElementById("selectedSeatsHolder").innerHTML =
+    "<div class='noSelected'>No Seat Selected</div>";
+}
 //Add eventLister to each unoccupied seat
 //Add eventLsiter to continue Button
 //Add eventListerner to Cancel Button
