@@ -42,14 +42,26 @@ function renderPosts() {
 
   const commentInput = document.createElement("input");
   commentInput.type = "text";
+  commentInput.id = "comment-input";
+  commentInput.name = "comment";
   commentInput.placeholder = "Write a comment...";
 
   const commentButton = document.createElement("button");
   commentButton.textContent = "Comment";
   commentButton.classList.add("comment-button");
   //Create eventListener here for the comment button
-  
-
+  commentButton.addEventListener("click", () => {
+    const commentText = commentInput.value.trim();
+    // console.log(commentText);
+    if (commentText) {
+      post1.comments.push(commentText);
+      commentInput.value = "";
+      postFooter.textContent = `Likes: ${post1.likes}   Comments: ${post1.comments.length}`;
+      const commentElement = document.createElement("p");
+      commentElement.textContent = commentText;
+      commentsContainer.appendChild(commentElement);
+    }
+  });
   const postFooter = document.createElement("div");
   postFooter.classList.add("post-footer");
   postFooter.textContent = `Likes: ${post1.likes}   Comments: ${post1.comments.length}`;
