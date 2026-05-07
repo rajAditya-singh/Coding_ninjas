@@ -32,3 +32,4 @@ questionObj.options.forEach((opt) => {
     displayOptions.textContent = "";
   });
 });
+
