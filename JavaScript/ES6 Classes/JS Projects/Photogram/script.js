@@ -56,10 +56,8 @@ function renderPosts() {
     if (commentText) {
       post1.comments.push(commentText);
       commentInput.value = "";
-      postFooter.textContent = `Likes: ${post1.likes}   Comments: ${post1.comments.length}`;
-      const commentElement = document.createElement("p");
-      commentElement.textContent = commentText;
-      commentsContainer.appendChild(commentElement);
+
+      renderPosts();
     }
   });
   const postFooter = document.createElement("div");

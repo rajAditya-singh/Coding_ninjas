@@ -15,7 +15,7 @@ const displayOptions = document.getElementById("options");
 
 const displayScore = document.getElementById("score");
 
-questionObj.options.forEach((opt) => {
+suffleOpt(options).forEach((opt) => {
   const optionBtn = document.createElement("button");
   optionBtn.textContent = opt;
   displayOptions.appendChild(optionBtn);
@@ -32,3 +32,11 @@ questionObj.options.forEach((opt) => {
     displayOptions.textContent = "";
   });
 });
+
+function suffleOpt(opt) {
+  for (let i = options.length - 1; i >= 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [opt[i], opt[j]] = [opt[j], opt[i]];
+  }
+  return opt;
+}
