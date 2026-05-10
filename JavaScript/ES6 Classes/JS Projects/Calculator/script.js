@@ -37,7 +37,8 @@ function calculateResult() {
   // This function should evaluate the currentInput, display the result, and handle errors
   try {
     // Evaluate the expression and update the display
-    let result = eval(currentInput);
+    let expression = currentInput.replace(/(\d+)%/g, "($1/100)");
+    let result = eval(expression);
     // console.log(currentInput)
     display.textContent = result;
     currentInput = result.toString();
