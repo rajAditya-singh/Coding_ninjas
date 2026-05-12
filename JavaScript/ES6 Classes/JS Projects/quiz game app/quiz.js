@@ -52,17 +52,15 @@ const quesJSON = [
 let score = 0;
 let currentQuestion = 0;
 
+const displayQuestion = document.getElementById("question");
+const displayOptions = document.getElementById("options");
+const displayScore = document.getElementById("score");
 showQuestions();
 
 function showQuestions() {
   const { correctAnswer, options, question } = quesJSON[currentQuestion];
 
-  const displayQuestion = document.getElementById("question");
   displayQuestion.textContent = question;
-
-  const displayOptions = document.getElementById("options");
-
-  const displayScore = document.getElementById("score");
 
   suffleOpt(options).forEach((opt) => {
     const optionBtn = document.createElement("button");
@@ -75,12 +73,22 @@ function showQuestions() {
       } else {
         score = score - 0.25;
       }
-      // console.log(score);
       displayScore.textContent = `Score : ${score}`;
-      // displayQuestion.textContent = "Quiz Completed!";
-      // displayOptions.textContent = "";
+      console.log(currentQuestion);
+      nextQuestion();
     });
   });
+}
+
+function nextQuestion() {
+  currentQuestion++;
+  displayOptions.textContent = "";
+  if (currentQuestion >= quesJSON.length) {
+    displayQuestion.textContent = "Quiz Completed!";
+    // displayOptions.textContent = "";
+  } else {
+    showQuestions();
+  }
 }
 
 function suffleOpt(opt) {
