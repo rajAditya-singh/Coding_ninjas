@@ -1,16 +1,55 @@
-//Create the event Listener for the buttons.
-let post1 = {
-  id: 1,
-  author: "John",
-  content: "My first Post!",
-  likes: 10,
-  comments: ["Great post!", "Nice photo!"],
-  image: "https://files.codingninjas.in/image2-28694.jpg",
-};
+// The code given below is for one object refactor the code it for using the JSON Data.
+let postsData = [
+  {
+    id: 1,
+    author: "John",
+    content: "Hello, Instagram!",
+    likes: 10,
+    comments: ["Great post!", "Nice photo!"],
+    image: "https://files.codingninjas.in/image2-28694.jpg",
+  },
+  {
+    id: 2,
+    author: "Jane",
+    content: "This is a great post!",
+    likes: 15,
+    comments: [],
+    image: "https://files.codingninjas.in/oip-28704.jpg",
+  },
+  {
+    id: 3,
+    author: "Alice",
+    content: "Another post",
+    likes: 8,
+    comments: [],
+    image: "https://files.codingninjas.in/th-2-28706.jpg",
+  },
+  {
+    id: 4,
+    author: "Bob",
+    content: "Check out this photo!",
+    likes: 20,
+    comments: [],
+    image: "https://files.codingninjas.in/image1-28708.jpg",
+  },
+];
+
+// This is a new Set to keep track of post IDs that have been liked
+// This ensures that each post can be liked only once, and allows for quick lookup of liked posts
+const likedPosts = new Set();
 
 function renderPosts() {
   const postsContainer = document.getElementById("posts");
   postsContainer.innerHTML = "";
+
+  // Iterate over each item in the postsData array using a forEach loop with a parameter
+  postsData.forEach((post)=>{
+    // Inside the loop, use the parameter to create and populate elements for each post
+    
+  })
+
+  }
+  // Replace 'post1' with the parameter name to access each post's properties like author, content etc.
 
   const postElement = document.createElement("div");
   postElement.classList.add("post");
@@ -28,40 +67,36 @@ function renderPosts() {
   const likeButton = document.createElement("button");
   likeButton.textContent = `Like`;
   likeButton.classList.add("like-button");
-  //Add eventListerner here to update the likes.
-  post1.likedPost = false;
   likeButton.addEventListener("click", () => {
-    if (!post1.likedPost) {
-      post1.likes += 1;
-      post1.likedPost = true;
-      likeButton.disabled = true;
-      likeButton.style.backgroundColor = "red";
-      postFooter.textContent = `Likes: ${post1.likes}   Comments: ${post1.comments.length}`;
+    if (!likedPosts.has(post1.id)) {
+      likePost();
+      likedPosts.add(post1.id);
+      likeButton.disabled = true; // Disable the button after clicking
+      //Change the background color of the button to red for all liked posts
+      // Hint: You might need to iterate through the likedPosts Set and update button styles
     }
   });
 
   const commentInput = document.createElement("input");
   commentInput.type = "text";
-  commentInput.id = "comment-input";
-  commentInput.name = "comment";
   commentInput.placeholder = "Write a comment...";
 
   const commentButton = document.createElement("button");
   commentButton.textContent = "Comment";
   commentButton.classList.add("comment-button");
-  //Create eventListener here for the comment button
-  commentButton.addEventListener("click", () => {
-    const commentText = commentInput.value.trim();
-    // console.log(commentText);
-    if (commentText) {
-      post1.comments.push(commentText);
+  // Update the addComment function to take the current post's id and the comment input value as arguments
+  commentButton.addEventListener(
+    "click",
+    () => {
+      addComment(commentInput.value);
       commentInput.value = "";
+    },
+    { once: true },
+  );
 
-      renderPosts();
-    }
-  });
   const postFooter = document.createElement("div");
   postFooter.classList.add("post-footer");
+  // Update the text content to reflect the current post's likes and comments using the loop parameter
   postFooter.textContent = `Likes: ${post1.likes}   Comments: ${post1.comments.length}`;
 
   const commentsContainer = document.createElement("div");
@@ -93,6 +128,26 @@ function renderPosts() {
   });
 
   postsContainer.appendChild(postElement);
+}
+
+// Function to handle post liking
+function likePost() {
+  // 1. Find the post in the postsData array by its ID
+  // 2. Increment the likes count for the found post
+  // 3. Re-render the posts to reflect the updated likes count
+  // Hint: You might need to pass a postId parameter to identify which post to like
+  post1.likes++;
+  renderPosts();
+}
+
+// Function to handle adding a comment
+function addComment(comment) {
+  // 1. Find the post in the postsData array by its ID
+  // 2. Add the new comment to the comments array of the found post
+  // 3. Re-render the posts to reflect the updated comments
+  // Hint: You might need to pass a postId parameter to identify which post to add the comment to
+  post1.comments.push(comment);
+  renderPosts();
 }
 
 renderPosts();
