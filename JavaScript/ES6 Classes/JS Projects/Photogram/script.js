@@ -65,9 +65,10 @@ function renderPosts() {
         likePost(post.id);
         likedPosts.add(post.id);
         likeButton.disabled = true;
-        // likeButton.style.backgroundColor = "red";
-        // console.log(post.id);
-        
+        likeButton.style.backgroundColor = "red";
+        // console.log(likedPosts);
+        console.log(document.querySelectorAll(".like-button"));
+        // Hint: You might need to iterate through the likedPosts Set and update button styles
       }
     });
     // Iterate over each item in the postsData array using a forEach loop with a parameter
