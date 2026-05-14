@@ -42,14 +42,9 @@ function renderPosts() {
   const postsContainer = document.getElementById("posts");
   postsContainer.innerHTML = "";
 
-  // Iterate over each item in the postsData array using a forEach loop with a parameter
-  postsData.forEach((post)=>{
-    // Inside the loop, use the parameter to create and populate elements for each post
-    
-  })
-
-  }
-  // Replace 'post1' with the parameter name to access each post's properties like author, content etc.
+// Iterate over each item in the postsData array using a forEach loop with a parameter
+// Inside the loop, use the parameter to create and populate elements for each post
+// Replace 'post1' with the parameter name to access each post's properties like author, content etc. 
 
   const postElement = document.createElement("div");
   postElement.classList.add("post");
@@ -91,7 +86,7 @@ function renderPosts() {
       addComment(commentInput.value);
       commentInput.value = "";
     },
-    { once: true },
+    { once: true }
   );
 
   const postFooter = document.createElement("div");
