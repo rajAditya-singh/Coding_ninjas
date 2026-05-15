@@ -1,4 +1,5 @@
-// The code given below is for one object refactor the code it for using the JSON Data.
+//for the given scaffold create event Listener and handler for the form.
+
 let postsData = [
   {
     id: 1,
@@ -33,11 +34,7 @@ let postsData = [
     image: "https://files.codingninjas.in/image1-28708.jpg",
   },
 ];
-
-// This is a new Set to keep track of post IDs that have been liked
-// This ensures that each post can be liked only once, and allows for quick lookup of liked posts
 const likedPosts = new Set();
-
 function renderPosts() {
   const postsContainer = document.getElementById("posts");
   postsContainer.innerHTML = "";
@@ -59,20 +56,17 @@ function renderPosts() {
     const likeButton = document.createElement("button");
     likeButton.textContent = `Like`;
     likeButton.classList.add("like-button");
-    likeButton.setAttribute("data-post-id", post.id);
-    if (likedPosts.has(post.id)) {
-      likeButton.disabled = true;
-      likeButton.style.backgroundColor = "red";
-    }
     likeButton.addEventListener("click", () => {
       if (!likedPosts.has(post.id)) {
-        likedPosts.add(post.id);
         likePost(post.id);
+        likedPosts.add(post.id);
+        likeButton.disabled = true;
+        for (let ind of likedPosts) {
+          const button = document.querySelectorAll(".like-button")[ind - 1];
+          button.style.backgroundColor = "red";
+        }
       }
     });
-    // Iterate over each item in the postsData array using a forEach loop with a parameter
-    // Inside the loop, use the parameter to create and populate elements for each post
-    // Replace 'post1' with the parameter name to access each post's properties like author, content etc.
 
     const commentInput = document.createElement("input");
     commentInput.type = "text";
@@ -81,19 +75,13 @@ function renderPosts() {
     const commentButton = document.createElement("button");
     commentButton.textContent = "Comment";
     commentButton.classList.add("comment-button");
-    // Update the addComment function to take the current post's id and the comment input value as arguments
-    commentButton.addEventListener(
-      "click",
-      () => {
-        addComment(post.id, commentInput.value);
-        commentInput.value = "";
-      },
-      { once: true },
-    );
+    commentButton.addEventListener("click", () => {
+      addComment(post.id, commentInput.value);
+      commentInput.value = "";
+    });
 
     const postFooter = document.createElement("div");
     postFooter.classList.add("post-footer");
-    // Update the text content to reflect the current post's likes and comments using the loop parameter
     postFooter.textContent = `Likes: ${post.likes}   Comments: ${post.comments.length}`;
 
     const commentsContainer = document.createElement("div");
@@ -130,28 +118,61 @@ function renderPosts() {
 
 // Function to handle post liking
 function likePost(postId) {
-  // 1. Find the post in the postsData array by its ID
-  // 2. Increment the likes count for the found post
-  // 3. Re-render the posts to reflect the updated likes count
-  // Hint: You might need to pass a postId parameter to identify which post to like
-  const post = postsData.find((p) => p.id === postId);
+  const post = postsData.find((post) => post.id === postId);
   if (post) {
     post.likes++;
+    renderPosts();
   }
-  renderPosts();
 }
 
 // Function to handle adding a comment
 function addComment(postId, comment) {
-  // 1. Find the post in the postsData array by its ID
-  // 2. Add the new comment to the comments array of the found post
-  // 3. Re-render the posts to reflect the updated comments
-  // Hint: You might need to pass a postId parameter to identify which post to add the comment to
-  const post = postsData.find((p) => p.id === postId);
+  const post = postsData.find((post) => post.id === postId);
   if (post) {
     post.comments.push(comment);
+    renderPosts();
   }
-  renderPosts();
 }
 
+// Create your function here to handle post creation and adding Post to the postsData.
+function postCreation(captions, imageurl) {
+  const newPost = {
+    id: postsData.length + 1,
+    author: "You",
+    content: captions,
+    likes: 0,
+    comments: [],
+    image: imageurl,
+  };
+  console.log(newPost);
+  postsData.push(newPost);
+  renderPosts();
+}
+// Add Event listeners to listen to the submit event of the form.
+// const submitBtn = document.querySelector(".submit-button");
+// submitBtn.addEventListener("click", (e) => {
+//   // e.preventDefault();
+//   const captionInput = document.getElementById(postInput);
+//   console.log(captionInput.value);
+//   const imageURL = document.getElementById(imageInput);
+//   console.log(imageURL.value);
+//   // postCreation(captionInput.value, imageURL.value);
+//   // captionInput.value = "";
+//   // imageURL.value = "";
+// });
+const postInput = document.getElementById("postInput");
+const imageInput = document.getElementById("imageInput");
+const form = document.getElementById("postForm");
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  let caption = postInput.value;
+  let imagefile = imageInput.files[0];
+  console.log(imagefile);
+  // let imageURL = URL.createObjectURL(imageInput.files[0]);
+  let imageURL = URL.createObjectURL(imagefile);
+  postCreation(caption, imageURL);
+  postInput.value = "";
+  imageInput.value = "";
+});
+// Initial rendering
 renderPosts();
