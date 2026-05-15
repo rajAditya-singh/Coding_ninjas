@@ -59,16 +59,15 @@ function renderPosts() {
     const likeButton = document.createElement("button");
     likeButton.textContent = `Like`;
     likeButton.classList.add("like-button");
-
+    likeButton.setAttribute("data-post-id", post.id);
+    if (likedPosts.has(post.id)) {
+      likeButton.disabled = true;
+      likeButton.style.backgroundColor = "red";
+    }
     likeButton.addEventListener("click", () => {
       if (!likedPosts.has(post.id)) {
-        likePost(post.id);
         likedPosts.add(post.id);
-        likeButton.disabled = true;
-        likeButton.style.backgroundColor = "red";
-        // console.log(likedPosts);
-        console.log(document.querySelectorAll(".like-button"));
-        // Hint: You might need to iterate through the likedPosts Set and update button styles
+        likePost(post.id);
       }
     });
     // Iterate over each item in the postsData array using a forEach loop with a parameter
