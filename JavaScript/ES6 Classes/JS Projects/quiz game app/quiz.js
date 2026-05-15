@@ -51,48 +51,86 @@ const quesJSON = [
 
 let score = 0;
 let currentQuestion = 0;
+let totalScore = quesJSON.length;
+let selectedOption = null;
 
 const displayQuestion = document.getElementById("question");
 const displayOptions = document.getElementById("options");
 const displayScore = document.getElementById("score");
+const submitBtn = document.getElementById("submit");
+const nextBtn = document.getElementById("next");
 showQuestions();
 
+submitBtn.addEventListener("click", () => {
+  const { correctAnswer } = quesJSON[currentQuestion];
+  if (selectedOption) {
+    if (selectedOption === correctAnswer) {
+      score++;
+    } else {
+      score = score - 0.25;
+    }
+    displayScore.textContent = `Score : ${score} / ${totalScore}`;
+    selectedOption = null;
+    nextQuestion();
+  } else {
+    alert("Please select an option before submitting.");
+  }
+});
+
+nextBtn.addEventListener("click", () => {
+  currentQuestion++;
+  displayOptions.textContent = "";
+  displayScore.textContent = `Score : ${score} / ${totalScore}`;
+  if (currentQuestion >= quesJSON.length) {
+    displayQuestion.textContent = "Quiz Completed!";
+    nextBtn.style.display = "none";
+    submitBtn.style.display = "none";
+  } else {
+    showQuestions();
+  }
+});
 function showQuestions() {
   const { correctAnswer, options, question } = quesJSON[currentQuestion];
 
   displayQuestion.textContent = question;
-
-  suffleOpt(options).forEach((opt) => {
+  const shuffledOptions = suffleOpt(options);
+  shuffledOptions.forEach((opts) => {
     const optionBtn = document.createElement("button");
-    optionBtn.textContent = opt;
+    optionBtn.textContent = opts;
     displayOptions.appendChild(optionBtn);
 
     optionBtn.addEventListener("click", () => {
-      if (opt === correctAnswer) {
-        score++;
-      } else {
-        score = score - 0.25;
-      }
-      displayScore.textContent = `Score : ${score}`;
-      console.log(currentQuestion);
-      nextQuestion();
+      // if (opts === correctAnswer) {
+      //   score++;
+      // } else {
+      //   score = score - 0.25;
+      // }
+      // displayScore.textContent = `Score : ${score} / ${totalScore}`;
+      // console.log(currentQuestion);
+      // nextQuestion();
+      optionBtn.style.backgroundColor = "#f57424";
+      // if (opts === correctAnswer) {
+      selectedOption = opts;
+      return selectedOption;
+      // }
     });
   });
 }
-
 function nextQuestion() {
   currentQuestion++;
   displayOptions.textContent = "";
   if (currentQuestion >= quesJSON.length) {
     displayQuestion.textContent = "Quiz Completed!";
     // displayOptions.textContent = "";
+    submitBtn.style.display = "none";
+    nextBtn.style.display = "none";
   } else {
     showQuestions();
   }
 }
 
 function suffleOpt(opt) {
-  for (let i = options.length - 1; i >= 0; i--) {
+  for (let i = opt.length - 1; i >= 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [opt[i], opt[j]] = [opt[j], opt[i]];
   }

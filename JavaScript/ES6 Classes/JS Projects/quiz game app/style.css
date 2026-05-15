@@ -47,15 +47,23 @@ body {
     background-color: #f57424;
   }
   
-  #btn {
+  #btn-submit, #btn-next {
     display: flex;
     width: 50%;
     margin: auto;
     justify-content: flex-end;
   }
+
+  /* #btn-next {
+    display: flex;
+    width: 50%;
+    margin: auto;
+    justify-content: flex-end;
+  } */
   
-  #next {
-    display: inline-block;
+  #submit, #next {
+   display: inline-block;
+    margin-top: 0.5rem;
     background-color: #0084ff;
     color: #fff;
     border: none;
