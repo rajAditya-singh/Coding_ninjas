@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 const songs = [
     {
         id: 1,
@@ -76,3 +77,33 @@ function displaySongs(songs){
         showSongs.appendChild(sontItem)
     })
 }
+=======
+const themebtn = document.querySelector(".theme-toggle-container");
+const themeColor = document.getElementById("theme_color");
+themeColor.textContent = "Dark";
+let themeToggleBtn = document.getElementById("theme-toggle-btn");
+
+themeToggleBtn.addEventListener("click", () => {
+  if (themeColor.textContent === "Dark") {
+    document.body.style.backgroundColor = "Black";
+    themeColor.textContent = "Light";
+    console.log(themeColor.textContent);
+  } else if (themeColor.textContent === "Light") {
+    document.body.style.backgroundColor = "white";
+    themeColor.textContent = "Dark";
+    console.log(themeColor.textContent);
+  }
+});
+// console.log(themeColor.textContent);
+
+// function toggleTheme() {
+//   if (themeColor.textContent === "Dark") {
+//     document.body.style.backgroundColor = "white";
+//     themeColor.textContent = "Light";
+//     console.log(themeColor.textContent);
+//   } else {
+//     document.body.style.backgroundColor = "black";
+//     themeColor.textContent = "Light";
+//   }
+// }
+>>>>>>> Stashed changes

@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Music Player</title>
@@ -9,122 +8,131 @@
     <link rel="stylesheet" href="style.css" />
 
     <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
 
-<body>
+  <body>
     <!-- ================= HEADER ================= -->
 
     <header class="header">
-        <h1 class="app-title">Music Player</h1>
+      <h1 class="app-title">Music Player</h1>
 
-        <div class="theme-toggle-container">
-            <span class="theme-text"> Dark </span>
+      <div class="theme-toggle-container">
+        <span id="theme_color"> Dark </span>
 
-            <button id="theme-toggle-btn">
-                <i class="fa-solid fa-moon"></i>
-            </button>
-        </div>
+        <button type="button" title="btn" id="theme-toggle-btn">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+      </div>
     </header>
 
     <!-- ================= MAIN CONTAINER ================= -->
 
     <main class="main-container">
-        <!-- ================= ALL SONGS SECTION ================= -->
+      <!-- ================= ALL SONGS SECTION ================= -->
 
-        <section class="all-songs-section">
-            <div class="filter-container">
-                <label for="genre-filter"> Filter by Genre: </label>
+      <section class="all-songs-section">
+        <div class="filter-container">
+          <label for="genre-filter"> Filter by Genre: </label>
 
-                <select id="genre-filter">
-                    <option value="all">All</option>
+          <select id="genre-filter">
+            <option value="all">All</option>
 
-                    <option value="pop">Pop</option>
+            <option value="pop">Pop</option>
 
-                    <option value="hiphop">Hip Hop</option>
+            <option value="hiphop">Hip Hop</option>
 
-                    <option value="rock">Rock</option>
-                </select>
-            </div>
+            <option value="rock">Rock</option>
+          </select>
+        </div>
 
-            <h2 class="section-heading">All Songs</h2>
+        <h2 class="section-heading">All Songs</h2>
 
-            <div id="songs-list">
-                <!-- SONG ITEM -->
+        <div id="songs-list">
+          <!-- SONG ITEM -->
 
-                <!-- <div class="song-item">Shape Of You - Ed Sheeran</div>
+          <!-- <div class="song-item">Shape Of You - Ed Sheeran</div>
 
                 <div class="song-item">All Of Me - Adele</div>
 
                 <div class="song-item">Locked Away - R. City</div> -->
-            </div>
-        </section>
+        </div>
+      </section>
 
-        <!-- ================= PLAYER CARD SECTION ================= -->
+      <!-- ================= PLAYER CARD SECTION ================= -->
 
-        <section class="player-section">
-            <!-- SONG CARD -->
+      <section class="player-section">
+        <!-- SONG CARD -->
 
-            <div class="song-card">
-                <img src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96" alt="song-image"
-                    class="song-image" />
+        <div class="song-card">
+          <img
+            src="https://i.scdn.co/image/ab67616d0000b273ba5db46f4b838ef6027e6f96"
+            alt="song-image"
+            class="song-image"
+          />
 
-                <div class="song-details">
-                    <h2 id="current-song-name">Shape Of You</h2>
+          <div class="song-details">
+            <h2 id="current-song-name">Shape Of You</h2>
 
-                    <p id="current-song-artist">Ed Sheeran</p>
-                </div>
-            </div>
+            <p id="current-song-artist">Ed Sheeran</p>
+          </div>
+        </div>
 
-            <!-- AUDIO PLAYER -->
+        <!-- AUDIO PLAYER -->
 
-            <audio id="audio-player" controls></audio>
+        <audio id="audio-player" controls></audio>
 
-            <!-- CONTROL BUTTONS -->
+        <!-- CONTROL BUTTONS -->
 
-            <div class="controls-container">
-                <button id="prev-btn">
-                    <i class="fa-solid fa-backward"></i>
-                </button>
+        <div class="controls-container">
+          <button id="prev-btn">
+            <i class="fa-solid fa-backward"></i>
+          </button>
 
-                <button id="play-btn">
-                    <i class="fa-solid fa-play"></i>
-                </button>
+          <button id="play-btn">
+            <i class="fa-solid fa-play"></i>
+          </button>
 
-                <button id="next-btn">
-                    <i class="fa-solid fa-forward"></i>
-                </button>
-            </div>
+          <button id="next-btn">
+            <i class="fa-solid fa-forward"></i>
+          </button>
+        </div>
 
-            <!-- ADD TO PLAYLIST -->
+        <!-- ADD TO PLAYLIST -->
 
-            <button id="add-to-playlist-btn">Add To Playlist</button>
-        </section>
+        <button id="add-to-playlist-btn">Add To Playlist</button>
+      </section>
 
-        <!-- ================= PLAYLIST SECTION ================= -->
+      <!-- ================= PLAYLIST SECTION ================= -->
 
-        <section class="playlist-section">
-            <!-- CREATE PLAYLIST -->
+      <section class="playlist-section">
+        <!-- CREATE PLAYLIST -->
 
-            <div class="playlist-form">
-                <input type="text" id="playlist-input" placeholder="Enter playlist name" />
+        <div class="playlist-form">
+          <input
+            type="text"
+            id="playlist-input"
+            placeholder="Enter playlist name"
+          />
 
-                <button id="create-playlist-btn">Create Playlist</button>
-            </div>
+          <button id="create-playlist-btn">Create Playlist</button>
+        </div>
 
-            <!-- PLAYLIST HEADING -->
+        <!-- PLAYLIST HEADING -->
 
-            <h2 class="section-heading">Current Playlist</h2>
+        <h2 class="section-heading">Current Playlist</h2>
 
-            <!-- PLAYLIST LIST -->
+        <!-- PLAYLIST LIST -->
 
-            <div id="playlist-list">
-                <div class="playlist-item">All Playlists</div>
-            </div>
-        </section>
+        <div id="playlist-list">
+          <div class="playlist-item">All Playlists</div>
+        </div>
+      </section>
     </main>
 
     <script src="script.js"></script>
-</body>
-
+  </body>
 </html>
