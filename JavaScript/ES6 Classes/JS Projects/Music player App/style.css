@@ -44,17 +44,34 @@ body{
     font-weight:bold;
 }
 
+.theme_color_black{
+    color: white;
+}
+
 #theme-toggle-btn{
-    width:50px;
-    height:50px;
-    border-radius:50%;
+    width:60px;
+    height:30px;
     border:none;
+    border-radius:20px;
+    background-color:#ccc;
+    position:relative;
     cursor:pointer;
+    padding:0 5px;
+}
+
+.toggle-circle{
+    width:22px;
+    height:22px;
     background-color:white;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    font-size:20px;
+    border-radius:50%;
+    position:absolute;
+    left:4px;
+    top:4px;
+    transition:0.3s;
+}
+
+.theme-toggle-btn-dark .toggle-circle{
+    transform:translateX(28px);
 }
 
 
@@ -276,4 +293,144 @@ body{
     .song-details h2{
         font-size:35px;
     }
+}
+
+/* ================= DARK MODE ================= */
+
+.dark-mode{
+    background-color:#121212;
+}
+
+
+
+/* HEADER */
+
+.dark-mode .header{
+    background-color:#1e1e1e;
+}
+
+.dark-mode .app-title{
+    color:white;
+}
+
+.dark-mode .theme-text{
+    color:white;
+}
+
+.dark-mode #theme-toggle-btn{
+    background-color:#2f2f2f;
+    color:white;
+}
+
+
+
+/* MAIN CONTAINER */
+
+.dark-mode .main-container{
+    background-color:#181818;
+}
+
+
+
+/* ALL SECTIONS */
+
+.dark-mode .all-songs-section,
+.dark-mode .player-section,
+.dark-mode .playlist-section{
+    background-color:#242424;
+    color:white;
+}
+
+
+
+/* SONG ITEMS */
+
+.dark-mode .song-item{
+    background-color:#333333;
+    color:white;
+}
+
+.dark-mode .song-item:hover{
+    background-color:#444444;
+}
+
+
+
+/* SONG CARD */
+
+.dark-mode .song-card{
+    background-color:#1f1f1f;
+}
+
+.dark-mode .song-details h2,
+.dark-mode .song-details p{
+    color:white;
+}
+
+
+
+/* AUDIO PLAYER */
+
+.dark-mode #audio-player{
+    filter:invert(1);
+}
+
+
+
+/* BUTTONS */
+
+.dark-mode .controls-container button,
+.dark-mode #add-to-playlist-btn,
+.dark-mode #create-playlist-btn{
+    background-color:#8b5cf6;
+    color:white;
+}
+
+.dark-mode .controls-container button:hover{
+    background-color:#6f3df0;
+}
+
+
+
+/* INPUT */
+
+.dark-mode #playlist-input{
+    background-color:#2d2d2d;
+    color:white;
+    border:1px solid #555;
+}
+
+.dark-mode #playlist-input::placeholder{
+    color:#bdbdbd;
+}
+
+
+
+/* SELECT */
+
+.dark-mode #genre-filter{
+    background-color:#2d2d2d;
+    color:white;
+}
+
+
+
+/* PLAYLIST */
+
+.dark-mode .playlist-item{
+    color:white;
+}
+
+
+
+/* HEADINGS */
+
+.dark-mode .section-heading{
+    color:white;
+}
+
+//toggleBtn Transition left to right
+
+.theme-toggle-btn-dark{
+    transform: translateX(50px);
 }
