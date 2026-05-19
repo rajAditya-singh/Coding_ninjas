@@ -2,7 +2,7 @@ const songs = [
   {
     id: 1,
     songName: "Enter Sandman",
-    artist: "Metallica",
+    artist: "Metallica 1",
     genre: "pop",
     image:
       "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c6/9b/1d/c69b1ddb-f873-53b4-9fc9-87ca49af2062/21UMGIM48676.rgb.jpg/440x440bb.jpg",
@@ -13,7 +13,7 @@ const songs = [
   {
     id: 2,
     songName: "Nothing Else Matters",
-    artist: "Metallica",
+    artist: "Metallica 2",
     genre: "rock",
     image:
       "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c6/9b/1d/c69b1ddb-f873-53b4-9fc9-87ca49af2062/21UMGIM48676.rgb.jpg/440x440bb.jpg",
@@ -24,7 +24,7 @@ const songs = [
   {
     id: 3,
     songName: "Master Of Puppets",
-    artist: "Metallica",
+    artist: "Metallica 3",
     genre: "hiphop",
     image:
       "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/82/9a/c0/829ac046-9ef9-b027-3257-c2ed6a515707/17UM1IM18688.rgb.jpg/440x440bb.jpg",
@@ -35,7 +35,7 @@ const songs = [
   {
     id: 4,
     songName: "One",
-    artist: "Metallica",
+    artist: "Metallica 4",
     genre: "pop",
     image:
       "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/c0/6d/c0c06d9a-16a9-2989-1a24-1f3231fc06f8/18UMGIM34141.rgb.jpg/440x440bb.jpg",
@@ -46,7 +46,7 @@ const songs = [
   {
     id: 5,
     songName: "Welcome Home",
-    artist: "Metallica",
+    artist: "Metallica 5",
     genre: "rock",
     image:
       "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/82/9a/c0/829ac046-9ef9-b027-3257-c2ed6a515707/17UM1IM18688.rgb.jpg/440x440bb.jpg",
@@ -57,9 +57,10 @@ const songs = [
   {
     id: 6,
     songName: "Fade To Black",
-    artist: "Metallica",
+    artist: "Metallica 6",
     genre: "rock",
-    image: "https://upload.wikimedia.org/wikipedia/en/5/5c/Ridetl.png",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/c0/6d/c0c06d9a-16a9-2989-1a24-1f3231fc06f8/18UMGIM34141.rgb.jpg/440x440bb.jpg",
     audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
   },
 ];
@@ -87,6 +88,24 @@ function displaySongs(songs) {
     sontItem.textContent = `${song.songName} - ${song.artist}`;
     sontItem.classList.add("song-item");
     showSongs.appendChild(sontItem);
+
+    //Song Display
+    sontItem.addEventListener("click", function () {
+      const song_image = document.querySelector(".song-image");
+      console.log(song.image);
+      song_image.src = song.image;
+
+      const current_song_name = document.getElementById("current-song-name");
+      current_song_name.textContent = song.songName;
+
+      const current_song_artist = document.getElementById(
+        "current-song-artist",
+      );
+      current_song_artist.textContent = song.artist;
+
+      const audio_player = document.getElementById("audio-player");
+      audio_player.src = song.audio;
+    });
   });
 }
 //End
@@ -106,3 +125,8 @@ themeToggleBtn.addEventListener("click", () => {
   }
 });
 //Toggle Button End
+
+// Song Display
+// songs.forEach((song) => {
+//   song.addEventListener("click", () => {});
+// });
