@@ -144,7 +144,6 @@ play_btn.addEventListener("click", function(){
     audio_player.src = Current_song.audio;
     if(!isPlaying){
         audio_player.play();
-        play_btn.innerHTML=
     }else{
 
     }
