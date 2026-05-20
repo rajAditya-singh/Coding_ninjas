@@ -86,22 +86,27 @@ themeToggleBtn.addEventListener("click", toggleTheme);
 //Show Song according to Genere
 const show_Songs = document.getElementById("songs-list");
 const SelectGenere = document.getElementById("genre-filter");
-showSongs();
-// let SelectedGenere = "all";
-SelectGenere.addEventListener("change", showSongs);
 
 function showSongs() {
-  let SelectedGenere = SelectGenere.value;
+  let SelectedGenere = this.value;
   console.log(SelectedGenere);
   const filterSongs = songs.filter(
-    (song) => SelectedGenere === "all" || SelectedGenere === song.genre,
+    (song) => SelectedGenere === song.genre || SelectedGenere === "all",
   );
   //   console.log(filterSongs);
+  displaySongs(filterSongs);
+}
+SelectGenere.addEventListener("change", show_Songs);
+
+//Function to display songs on the webpage
+displaySongs(songs);
+
+function displaySongs(songs) {
   show_Songs.innerHTML = "";
   let currentSongIndex = 0;
   let isPlaying = false;
 
-  filterSongs.forEach((song) => {
+  songs.forEach((song) => {
     const sontItem = document.createElement("div");
     sontItem.textContent = `${song.songName} - ${song.artist}`;
     sontItem.classList.add("song-item");
@@ -109,8 +114,6 @@ function showSongs() {
 
     //Song Display in song Cart-----------------------
     sontItem.addEventListener("click", function () {
-      isPlaying = true;
-      play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
       const song_image = document.querySelector(".song-image");
       //   console.log(song);
       song_image.src = song.image;
@@ -132,18 +135,17 @@ function showSongs() {
     //--------------End------------------------
   });
 
-  // CONTROL BUTTONS ----------------------------------
+  //CONTROL BUTTONS ----------------------------------
   const next_btn = document.getElementById("next-btn");
   const play_btn = document.getElementById("play-btn");
   const prev_btn = document.getElementById("prev-btn");
   const audio_player = document.getElementById("audio-player");
-  //   let Current_song = filterSongs[currentSongIndex];
+  let Current_song = songs[currentSongIndex];
+  audio_player.src = Current_song.audio;
 
   next_btn.addEventListener("click", () => {
     currentSongIndex++;
-    isPlaying = true;
-    play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-    let Current_song = filterSongs[currentSongIndex];
+    let Current_song = songs[currentSongIndex];
     const song_image = document.querySelector(".song-image");
     song_image.src = Current_song.image;
 
@@ -152,7 +154,6 @@ function showSongs() {
 
     const current_song_artist = document.getElementById("current-song-artist");
     current_song_artist.textContent = Current_song.artist;
-    audio_player.src = Current_song.audio;
     audio_player.play();
   });
 
@@ -169,12 +170,8 @@ function showSongs() {
   });
 
   prev_btn.addEventListener("click", function () {
-    // if (currentSongIndex === songs.length)
-
-    currentSongIndex--;
-    isPlaying = true;
-    play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-    let Current_song = filterSongs[currentSongIndex];
+    if (currentSongIndex === songs.length) currentSongIndex--;
+    let Current_song = songs[currentSongIndex];
     const song_image = document.querySelector(".song-image");
     song_image.src = Current_song.image;
 
@@ -183,13 +180,7 @@ function showSongs() {
 
     const current_song_artist = document.getElementById("current-song-artist");
     current_song_artist.textContent = Current_song.artist;
-    audio_player.src = Current_song.audio;
-
     audio_player.play();
   });
 }
-
-//Function to display songs on the webpage
-// displaySongs(songs);
-
 //--------------End------------------------
