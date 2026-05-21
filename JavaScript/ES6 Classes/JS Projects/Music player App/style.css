@@ -146,6 +146,16 @@ body{
     font-size:20px;
     transition:0.3s;
 }
+.Playlist-song-item{
+    background-color:#1580be;
+    color:white;
+    padding:15px;
+    border-radius:5px;
+    cursor:pointer;
+    font-size:20px;
+    transition:0.3s;
+    margin-bottom: 5px;
+}
 
 .song-item:hover{
     background-color:#0e689d;
