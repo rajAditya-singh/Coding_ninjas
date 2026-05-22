@@ -91,15 +91,16 @@ showSongs();
 SelectGenere.addEventListener("change", showSongs);
 
 let currentSongIndex = 0;
+let isPlaying = false;
 //--------------Show Song Start--------------------
+
 function showSongs() {
     let SelectedGenere = SelectGenere.value;
-    let isPlaying = false;
-    console.log(SelectedGenere);
+
     const filterSongs = songs.filter(
         (song) => SelectedGenere === "all" || SelectedGenere === song.genre,
     );
-    //   console.log(filterSongs);
+
     show_Songs.innerHTML = "";
 
     filterSongs.forEach((song) => {
@@ -117,64 +118,51 @@ function showSongs() {
         });
         //--------------End------------------------
     });
-
-    // CONTROL BUTTONS ----------------------------------
-    const next_btn = document.getElementById("next-btn");
-    const play_btn = document.getElementById("play-btn");
-    const prev_btn = document.getElementById("prev-btn");
-    const audio_player = document.getElementById("audio-player");
-    //   let Current_song = filterSongs[currentSongIndex];
-
-    next_btn.addEventListener("click", () => {
-        currentSongIndex++;
-        if (currentSongIndex >= filterSongs.length) {
-            currentSongIndex = 0;
-        }
-        isPlaying = true;
-        play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-        let Current_song = filterSongs[currentSongIndex];
-        renderCurrentSong(Current_song);
-    });
-
-    play_btn.addEventListener("click", function () {
-        if (!isPlaying) {
-            isPlaying = true;
-            audio_player.play();
-            play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-        } else {
-            isPlaying = false;
-            audio_player.pause();
-            play_btn.innerHTML = `<i class="fa-solid fa-play"></i>`;
-        }
-    });
-
-    prev_btn.addEventListener("click", function () {
-        if (currentSongIndex === 0) {
-            let Current_song = filterSongs[currentSongIndex];
-            renderCurrentSong(Current_song);
-        } else {
-            currentSongIndex--;
-            isPlaying = true;
-            play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-            let Current_song = filterSongs[currentSongIndex];
-            renderCurrentSong(Current_song);
-        }
-    });
-
-    
-    const add_to_playlist_btn = document.getElementById("add-to-playlist-btn")
-    const Playlist_songs_list =  document.getElementById("Playlist-songs-list")
-    add_to_playlist_btn.addEventListener("click", function () {
-        let Current_song = filterSongs[currentSongIndex];
-        const AddedSong = document.createElement("div")
-        AddedSong.classList.add("Playlist-song-item")
-        AddedSong.textContent = `${Current_song.songName} - ${Current_song.artist}`;
-        Playlist_songs_list.appendChild(AddedSong)
-    })
-
+    // return filterSongs
 }
 
-//--------------Show Song End--------------------
+// CONTROL BUTTONS ----------------------------------
+const next_btn = document.getElementById("next-btn");
+const play_btn = document.getElementById("play-btn");
+const prev_btn = document.getElementById("prev-btn");
+const audio_player = document.getElementById("audio-player");
+
+next_btn.addEventListener("click", () => {
+    currentSongIndex++;
+    if (currentSongIndex >= songs.length) {
+        currentSongIndex = 0;
+    }
+    isPlaying = true;
+    play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+    let Current_song = songs[currentSongIndex];
+    renderCurrentSong(Current_song);
+});
+
+play_btn.addEventListener("click", function () {
+    if (!isPlaying) {
+        isPlaying = true;
+        audio_player.play();
+        play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+    } else {
+        isPlaying = false;
+        audio_player.pause();
+        play_btn.innerHTML = `<i class="fa-solid fa-play"></i>`;
+    }
+});
+
+prev_btn.addEventListener("click", function () {
+    if (currentSongIndex === 0) {
+        let Current_song = songs[currentSongIndex];
+        renderCurrentSong(Current_song);
+    } else {
+        currentSongIndex--;
+        isPlaying = true;
+        play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+        let Current_song = songs[currentSongIndex];
+        renderCurrentSong(Current_song);
+    }
+});
+
 
 //Render Current Song Start------------------------
 function renderCurrentSong(current) {
@@ -196,10 +184,20 @@ function renderCurrentSong(current) {
 
 // create Playlist 
 
+let playlist = []
+const add_to_playlist_btn = document.getElementById("add-to-playlist-btn")
+const Playlist_songs_list = document.getElementById("Playlist-songs-list")
+add_to_playlist_btn.addEventListener("click", function () {
+    let Current_song = songs[currentSongIndex];
+    const AddedSong = document.createElement("div")
+    AddedSong.classList.add("Playlist-song-item")
+    AddedSong.textContent = `${Current_song.songName} - ${Current_song.artist}`;
+    Playlist_songs_list.appendChild(AddedSong)
+})
+
 const playList_name = document.getElementById("playlist-input")
 const create_playlist_btn = document.getElementById("create-playlist-btn")
 const All_playlist = document.getElementById("playlist-list")
-
 function createPlaylist() {
     const newPlaylist = document.createElement("div")
     newPlaylist.classList.add("song-item")
@@ -207,5 +205,4 @@ function createPlaylist() {
     All_playlist.appendChild(newPlaylist)
     playList_name.value = ""
 }
-
 create_playlist_btn.addEventListener("click", createPlaylist)

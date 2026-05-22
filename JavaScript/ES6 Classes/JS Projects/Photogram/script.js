@@ -148,18 +148,7 @@ function postCreation(captions, imageurl) {
   postsData.push(newPost);
   renderPosts();
 }
-// Add Event listeners to listen to the submit event of the form.
-// const submitBtn = document.querySelector(".submit-button");
-// submitBtn.addEventListener("click", (e) => {
-//   // e.preventDefault();
-//   const captionInput = document.getElementById(postInput);
-//   console.log(captionInput.value);
-//   const imageURL = document.getElementById(imageInput);
-//   console.log(imageURL.value);
-//   // postCreation(captionInput.value, imageURL.value);
-//   // captionInput.value = "";
-//   // imageURL.value = "";
-// });
+
 const postInput = document.getElementById("postInput");
 const imageInput = document.getElementById("imageInput");
 const form = document.getElementById("postForm");
