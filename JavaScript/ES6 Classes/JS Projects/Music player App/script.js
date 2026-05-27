@@ -187,22 +187,11 @@ function renderCurrentSong(current) {
 let playlist = []
 const add_to_playlist_btn = document.getElementById("add-to-playlist-btn")
 const Playlist_songs_list = document.getElementById("Playlist-songs-list")
-add_to_playlist_btn.addEventListener("click", function () {
-    let Current_song = songs[currentSongIndex];
-    const AddedSong = document.createElement("div")
-    AddedSong.classList.add("Playlist-song-item")
-    AddedSong.textContent = `${Current_song.songName} - ${Current_song.artist}`;
-    Playlist_songs_list.appendChild(AddedSong)
-})
-
 const playList_name = document.getElementById("playlist-input")
 const create_playlist_btn = document.getElementById("create-playlist-btn")
 const All_playlist = document.getElementById("playlist-list")
-function createPlaylist() {
-    const newPlaylist = document.createElement("div")
-    newPlaylist.classList.add("song-item")
-    newPlaylist.textContent = playList_name.value;
-    All_playlist.appendChild(newPlaylist)
-    playList_name.value = ""
-}
+
+
+
+
 create_playlist_btn.addEventListener("click", createPlaylist)
