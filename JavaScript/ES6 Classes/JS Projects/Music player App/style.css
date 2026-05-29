@@ -439,7 +439,7 @@ body{
     color:white;
 }
 
-//toggleBtn Transition left to right
+/* toggleBtn Transition left to right */
 
 .theme-toggle-btn-dark{
     transform: translateX(50px);

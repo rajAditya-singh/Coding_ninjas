@@ -184,14 +184,80 @@ function renderCurrentSong(current) {
 
 // create Playlist 
 
-let playlist = []
-const add_to_playlist_btn = document.getElementById("add-to-playlist-btn")
-const Playlist_songs_list = document.getElementById("Playlist-songs-list")
+let playlists = []
+let selectedPlalistIndex = 0;
 const playList_name = document.getElementById("playlist-input")
 const create_playlist_btn = document.getElementById("create-playlist-btn")
 const All_playlist = document.getElementById("playlist-list")
 
 
+function createPlaylist() {
+    if (playList_name.value == "") return;
 
+    const playListObject = {
+        name: playList_name.value,
+        song: []
+    }
+    playlists.push(playListObject)
 
+    renderPlaylist();
+    console.log(playlists)
+}
 create_playlist_btn.addEventListener("click", createPlaylist)
+
+function renderPlaylist() {
+    All_playlist.textContent = ""
+    playlists.forEach((playlist, index) => {
+        let newPlaylist = document.createElement("div")
+        newPlaylist.classList.add("song-item");
+        newPlaylist.textContent = playlist.name;
+
+
+        if (index == selectedPlalistIndex) {
+            newPlaylist.style.border = "3px solid white"
+        }
+
+        newPlaylist.addEventListener("click", () => {
+            selectedPlalistIndex = index
+            // console.log(index)
+            // console.log(selectedPlalistIndex)
+            renderPlaylist()
+
+            renderPlaylistSongs();
+        })
+
+        All_playlist.appendChild(newPlaylist)
+    })
+}
+
+const add_to_playlist_btn = document.getElementById("add-to-playlist-btn")
+
+add_to_playlist_btn.addEventListener("click", function () {
+    if (playlists.length === 0) {
+        alert("Select A playlist")
+        return
+    }
+    let Current_song = songs[currentSongIndex];
+    playlists[selectedPlalistIndex].song.push(Current_song);
+
+    console.log(playlists)
+    renderPlaylistSongs()
+})
+
+const Playlist_songs_list = document.getElementById("Playlist-songs-list")
+
+function renderPlaylistSongs() {
+    Playlist_songs_list.innerHTML = ""
+
+    const currentPlaylist = playlists[selectedPlalistIndex]
+
+    currentPlaylist.song.forEach((song) => {
+        const addedSong = document.createElement("div")
+        addedSong.classList.add("Playlist-song-item")
+        addedSong.textContent = `${song.songName} - ${song.artist}`;
+
+        Playlist_songs_list.appendChild(addedSong)
+    })
+}
+
+
