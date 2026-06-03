@@ -251,7 +251,20 @@ body{
     gap:10px;
     margin-bottom:30px;
 }
-
+#Song-input{
+    flex:1;
+    padding:10px;
+    font-size:15px;
+    border:1px solid gray;
+}
+#search-btn{
+    padding:5px 10px;
+    border:none;
+    background-color:#8b5cf6;
+    color:white;
+    font-size:15px;
+    cursor:pointer;
+}
 #playlist-input{
     flex:1;
     padding:15px;

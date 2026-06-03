@@ -1,68 +1,68 @@
 const songs = [
-    {
-        id: 1,
-        songName: "Enter Sandman",
-        artist: "Metallica 1",
-        genre: "pop",
-        image:
-            "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c6/9b/1d/c69b1ddb-f873-53b4-9fc9-87ca49af2062/21UMGIM48676.rgb.jpg/440x440bb.jpg",
-        audio:
-            "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/23/3a/76/233a7642-1e06-d03c-a998-e445068e5c52/mzaf_10269670333044316164.plus.aac.ep.m4a",
-    },
+  {
+    id: 1,
+    songName: "Enter Sandman",
+    artist: "Metallica 1",
+    genre: "pop",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c6/9b/1d/c69b1ddb-f873-53b4-9fc9-87ca49af2062/21UMGIM48676.rgb.jpg/440x440bb.jpg",
+    audio:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/23/3a/76/233a7642-1e06-d03c-a998-e445068e5c52/mzaf_10269670333044316164.plus.aac.ep.m4a",
+  },
 
-    {
-        id: 2,
-        songName: "Nothing Else Matters",
-        artist: "Metallica 2",
-        genre: "rock",
-        image:
-            "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c6/9b/1d/c69b1ddb-f873-53b4-9fc9-87ca49af2062/21UMGIM48676.rgb.jpg/440x440bb.jpg",
-        audio:
-            "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ce/fb/74/cefb74f2-8632-d7ca-ba70-97c5f1775fa6/mzaf_1968547138222951403.plus.aac.ep.m4a",
-    },
+  {
+    id: 2,
+    songName: "Nothing Else Matters",
+    artist: "Metallica 2",
+    genre: "rock",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music125/v4/c6/9b/1d/c69b1ddb-f873-53b4-9fc9-87ca49af2062/21UMGIM48676.rgb.jpg/440x440bb.jpg",
+    audio:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/ce/fb/74/cefb74f2-8632-d7ca-ba70-97c5f1775fa6/mzaf_1968547138222951403.plus.aac.ep.m4a",
+  },
 
-    {
-        id: 3,
-        songName: "Master Of Puppets",
-        artist: "Metallica 3",
-        genre: "hiphop",
-        image:
-            "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/82/9a/c0/829ac046-9ef9-b027-3257-c2ed6a515707/17UM1IM18688.rgb.jpg/440x440bb.jpg",
-        audio:
-            "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/28/c0/2f/28c02f20-0978-b752-bd0e-126b563b7c0f/mzaf_5179440639021683422.plus.aac.ep.m4a",
-    },
+  {
+    id: 3,
+    songName: "Master Of Puppets",
+    artist: "Metallica 3",
+    genre: "hiphop",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/82/9a/c0/829ac046-9ef9-b027-3257-c2ed6a515707/17UM1IM18688.rgb.jpg/440x440bb.jpg",
+    audio:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview112/v4/28/c0/2f/28c02f20-0978-b752-bd0e-126b563b7c0f/mzaf_5179440639021683422.plus.aac.ep.m4a",
+  },
 
-    {
-        id: 4,
-        songName: "One",
-        artist: "Metallica 4",
-        genre: "pop",
-        image:
-            "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/c0/6d/c0c06d9a-16a9-2989-1a24-1f3231fc06f8/18UMGIM34141.rgb.jpg/440x440bb.jpg",
-        audio:
-            "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/cf/b9/41/cfb9419e-559d-3997-d162-2419a50806bd/mzaf_293219985142213069.plus.aac.ep.m4a",
-    },
+  {
+    id: 4,
+    songName: "One",
+    artist: "Metallica 4",
+    genre: "pop",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/c0/6d/c0c06d9a-16a9-2989-1a24-1f3231fc06f8/18UMGIM34141.rgb.jpg/440x440bb.jpg",
+    audio:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview125/v4/cf/b9/41/cfb9419e-559d-3997-d162-2419a50806bd/mzaf_293219985142213069.plus.aac.ep.m4a",
+  },
 
-    {
-        id: 5,
-        songName: "Welcome Home",
-        artist: "Metallica 5",
-        genre: "rock",
-        image:
-            "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/82/9a/c0/829ac046-9ef9-b027-3257-c2ed6a515707/17UM1IM18688.rgb.jpg/440x440bb.jpg",
-        audio:
-            "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4d/dd/06/4ddd068a-b4c3-a0b7-f226-1683e349d197/mzaf_15152948116407479086.plus.aac.ep.m4a",
-    },
+  {
+    id: 5,
+    songName: "Welcome Home",
+    artist: "Metallica 5",
+    genre: "rock",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/82/9a/c0/829ac046-9ef9-b027-3257-c2ed6a515707/17UM1IM18688.rgb.jpg/440x440bb.jpg",
+    audio:
+      "https://audio-ssl.itunes.apple.com/itunes-assets/AudioPreview115/v4/4d/dd/06/4ddd068a-b4c3-a0b7-f226-1683e349d197/mzaf_15152948116407479086.plus.aac.ep.m4a",
+  },
 
-    {
-        id: 6,
-        songName: "Fade To Black",
-        artist: "Metallica 6",
-        genre: "rock",
-        image:
-            "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/c0/6d/c0c06d9a-16a9-2989-1a24-1f3231fc06f8/18UMGIM34141.rgb.jpg/440x440bb.jpg",
-        audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
-    },
+  {
+    id: 6,
+    songName: "Fade To Black",
+    artist: "Metallica 6",
+    genre: "rock",
+    image:
+      "https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/c0/c0/6d/c0c06d9a-16a9-2989-1a24-1f3231fc06f8/18UMGIM34141.rgb.jpg/440x440bb.jpg",
+    audio: "https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3",
+  },
 ];
 
 //Toggle Button Start --------------------------
@@ -70,14 +70,14 @@ const themeColor = document.getElementById("theme_color");
 const themeToggleBtn = document.getElementById("theme-toggle-btn");
 
 function toggleTheme() {
-    document.body.classList.toggle("dark-mode");
-    themeToggleBtn.classList.toggle("theme-toggle-btn-dark");
-    themeColor.classList.toggle("theme_color_black");
-    if (document.body.classList.contains("dark-mode")) {
-        themeColor.textContent = "Light";
-    } else {
-        themeColor.textContent = "Dark";
-    }
+  document.body.classList.toggle("dark-mode");
+  themeToggleBtn.classList.toggle("theme-toggle-btn-dark");
+  themeColor.classList.toggle("theme_color_black");
+  if (document.body.classList.contains("dark-mode")) {
+    themeColor.textContent = "Light";
+  } else {
+    themeColor.textContent = "Dark";
+  }
 }
 themeToggleBtn.addEventListener("click", toggleTheme);
 
@@ -95,30 +95,30 @@ let isPlaying = false;
 //--------------Show Song Start--------------------
 
 function showSongs() {
-    let SelectedGenere = SelectGenere.value;
+  let SelectedGenere = SelectGenere.value;
 
-    const filterSongs = songs.filter(
-        (song) => SelectedGenere === "all" || SelectedGenere === song.genre,
-    );
+  const filterSongs = songs.filter(
+    (song) => SelectedGenere === "all" || SelectedGenere === song.genre,
+  );
 
-    show_Songs.innerHTML = "";
+  show_Songs.innerHTML = "";
 
-    filterSongs.forEach((song) => {
-        const sontItem = document.createElement("div");
-        sontItem.textContent = `${song.songName} - ${song.artist}`;
-        sontItem.classList.add("song-item");
-        show_Songs.appendChild(sontItem);
+  filterSongs.forEach((song) => {
+    const sontItem = document.createElement("div");
+    sontItem.textContent = `${song.songName} - ${song.artist}`;
+    sontItem.classList.add("song-item");
+    show_Songs.appendChild(sontItem);
 
-        //Song Display in song Cart-----------------------
-        sontItem.addEventListener("click", function () {
-            isPlaying = true;
-            play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-            renderCurrentSong(song);
-            return (currentSongIndex = song.id - 1);
-        });
-        //--------------End------------------------
+    //Song Display in song Cart-----------------------
+    sontItem.addEventListener("click", function () {
+      isPlaying = true;
+      play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+      renderCurrentSong(song);
+      return (currentSongIndex = song.id - 1);
     });
-    // return filterSongs
+    //--------------End------------------------
+  });
+  // return filterSongs
 }
 
 // CONTROL BUTTONS ----------------------------------
@@ -128,136 +128,171 @@ const prev_btn = document.getElementById("prev-btn");
 const audio_player = document.getElementById("audio-player");
 
 next_btn.addEventListener("click", () => {
-    currentSongIndex++;
-    if (currentSongIndex >= songs.length) {
-        currentSongIndex = 0;
-    }
+  currentSongIndex++;
+  if (currentSongIndex >= songs.length) {
+    currentSongIndex = 0;
+  }
+  isPlaying = true;
+  play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+  let Current_song = songs[currentSongIndex];
+  renderCurrentSong(Current_song);
+});
+
+play_btn.addEventListener("click", function () {
+  if (!isPlaying) {
+    isPlaying = true;
+    audio_player.play();
+    play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+  } else {
+    isPlaying = false;
+    audio_player.pause();
+    play_btn.innerHTML = `<i class="fa-solid fa-play"></i>`;
+  }
+});
+
+prev_btn.addEventListener("click", function () {
+  if (currentSongIndex === 0) {
+    let Current_song = songs[currentSongIndex];
+    renderCurrentSong(Current_song);
+  } else {
+    currentSongIndex--;
     isPlaying = true;
     play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
     let Current_song = songs[currentSongIndex];
     renderCurrentSong(Current_song);
+  }
 });
-
-play_btn.addEventListener("click", function () {
-    if (!isPlaying) {
-        isPlaying = true;
-        audio_player.play();
-        play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-    } else {
-        isPlaying = false;
-        audio_player.pause();
-        play_btn.innerHTML = `<i class="fa-solid fa-play"></i>`;
-    }
-});
-
-prev_btn.addEventListener("click", function () {
-    if (currentSongIndex === 0) {
-        let Current_song = songs[currentSongIndex];
-        renderCurrentSong(Current_song);
-    } else {
-        currentSongIndex--;
-        isPlaying = true;
-        play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
-        let Current_song = songs[currentSongIndex];
-        renderCurrentSong(Current_song);
-    }
-});
-
 
 //Render Current Song Start------------------------
 function renderCurrentSong(current) {
-    const song_image = document.querySelector(".song-image");
-    song_image.src = current.image;
+  const song_image = document.querySelector(".song-image");
+  song_image.src = current.image;
 
-    const current_song_name = document.getElementById("current-song-name");
-    current_song_name.textContent = current.songName;
+  const current_song_name = document.getElementById("current-song-name");
+  current_song_name.textContent = current.songName;
 
-    const current_song_artist = document.getElementById("current-song-artist");
-    current_song_artist.textContent = current.artist;
-    const audio_player = document.getElementById("audio-player");
-    audio_player.src = current.audio;
+  const current_song_artist = document.getElementById("current-song-artist");
+  current_song_artist.textContent = current.artist;
+  const audio_player = document.getElementById("audio-player");
+  audio_player.src = current.audio;
 
-    audio_player.play();
+  audio_player.play();
 }
 
 //Render Current Song end------------------------
 
-// create Playlist 
+// create Playlist
 
-let playlists = []
-let selectedPlalistIndex = 0;
-const playList_name = document.getElementById("playlist-input")
-const create_playlist_btn = document.getElementById("create-playlist-btn")
-const All_playlist = document.getElementById("playlist-list")
-
+let playlists = [];
+let selectedPlaylistIndex = 0;
+const playList_name = document.getElementById("playlist-input");
+const create_playlist_btn = document.getElementById("create-playlist-btn");
+const All_playlist = document.getElementById("playlist-list");
 
 function createPlaylist() {
-    if (playList_name.value == "") return;
+  if (playList_name.value == "") return;
 
-    const playListObject = {
-        name: playList_name.value,
-        song: []
-    }
-    playlists.push(playListObject)
+  const playListObject = {
+    name: playList_name.value,
+    song: [],
+  };
+  playlists.push(playListObject);
 
-    renderPlaylist();
-    console.log(playlists)
+  renderPlaylist();
+  console.log(playlists);
 }
-create_playlist_btn.addEventListener("click", createPlaylist)
+create_playlist_btn.addEventListener("click", createPlaylist);
 
 function renderPlaylist() {
-    All_playlist.textContent = ""
-    playlists.forEach((playlist, index) => {
-        let newPlaylist = document.createElement("div")
-        newPlaylist.classList.add("song-item");
-        newPlaylist.textContent = playlist.name;
+  All_playlist.textContent = "";
+  playlists.forEach((playlist, index) => {
+    let newPlaylist = document.createElement("div");
+    newPlaylist.classList.add("song-item");
+    newPlaylist.textContent = playlist.name;
 
+    if (index == selectedPlaylistIndex) {
+      newPlaylist.style.border = "3px solid white";
+    }
 
-        if (index == selectedPlalistIndex) {
-            newPlaylist.style.border = "3px solid white"
-        }
+    newPlaylist.addEventListener("click", () => {
+      selectedPlaylistIndex = index;
+      renderPlaylist();
+      renderPlaylistSongs();
+    });
 
-        newPlaylist.addEventListener("click", () => {
-            selectedPlalistIndex = index
-            // console.log(index)
-            // console.log(selectedPlalistIndex)
-            renderPlaylist()
-
-            renderPlaylistSongs();
-        })
-
-        All_playlist.appendChild(newPlaylist)
-    })
+    All_playlist.appendChild(newPlaylist);
+  });
 }
 
-const add_to_playlist_btn = document.getElementById("add-to-playlist-btn")
+const add_to_playlist_btn = document.getElementById("add-to-playlist-btn");
 
 add_to_playlist_btn.addEventListener("click", function () {
-    if (playlists.length === 0) {
-        alert("Select A playlist")
-        return
-    }
-    let Current_song = songs[currentSongIndex];
-    playlists[selectedPlalistIndex].song.push(Current_song);
+  if (playlists.length === 0) {
+    alert("Select A playlist");
+    return;
+  }
+  let Current_song = songs[currentSongIndex];
+  //if song is already in playlist then return
+  if (
+    playlists[selectedPlaylistIndex].song.find(
+      (song) => song.id === Current_song.id,
+    )
+  ) {
+    alert("Song is already in playlist");
+    return;
+  }
+  playlists[selectedPlaylistIndex].song.push(Current_song);
 
-    console.log(playlists)
-    renderPlaylistSongs()
-})
+  console.log(playlists);
+  renderPlaylistSongs();
+});
 
-const Playlist_songs_list = document.getElementById("Playlist-songs-list")
+const Playlist_songs_list = document.getElementById("Playlist-songs-list");
 
 function renderPlaylistSongs() {
-    Playlist_songs_list.innerHTML = ""
+  Playlist_songs_list.innerHTML = "";
 
-    const currentPlaylist = playlists[selectedPlalistIndex]
+  const currentPlaylist = playlists[selectedPlaylistIndex];
 
-    currentPlaylist.song.forEach((song) => {
-        const addedSong = document.createElement("div")
-        addedSong.classList.add("Playlist-song-item")
-        addedSong.textContent = `${song.songName} - ${song.artist}`;
+  currentPlaylist.song.forEach((song) => {
+    const addedSong = document.createElement("div");
+    addedSong.classList.add("Playlist-song-item");
+    addedSong.textContent = `${song.songName} - ${song.artist}`;
 
-        Playlist_songs_list.appendChild(addedSong)
-    })
+    Playlist_songs_list.appendChild(addedSong);
+  });
+}
+
+//Song Search
+const searchInput = document.getElementById("Song-input");
+const searchBtn = document.getElementById("search-btn");
+
+searchBtn.addEventListener("click", function () {
+  const searchTerm = searchInput.value.toLowerCase();
+  const filteredSongs = songs.filter(
+    (song) =>
+      song.songName.toLowerCase().includes(searchTerm) ||
+      song.artist.toLowerCase().includes(searchTerm),
+  );
+  renderFilteredSongs(filteredSongs);
+});
+
+
+function renderFilteredSongs(filteredSongs) {
+  show_Songs.innerHTML = "";
+  filteredSongs.forEach((song) => {
+    const songItem = document.createElement("div");
+    songItem.textContent = `${song.songName} - ${song.artist}`;
+    songItem.classList.add("song-item");
+    show_Songs.appendChild(songItem);
+
+    songItem.addEventListener("click", function () {
+      isPlaying = true;
+      play_btn.innerHTML = `<i class="fa-solid fa-pause"></i>`;
+      renderCurrentSong(song);
+      currentSongIndex = songs.findIndex((s) => s.id === song.id);
+    });
+  });
 }
 
 
