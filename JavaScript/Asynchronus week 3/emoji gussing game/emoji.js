@@ -42,7 +42,7 @@ const emojiDetails = [
   function nextEmoji() {
     currentEmojiIndex++;
 
-    if (currentEmojiIndex === emojiDetails.length) {
+    if (current_index === emojiDetails.length) {
       currentEmojiIndex = 0;
       score=0;
     }
