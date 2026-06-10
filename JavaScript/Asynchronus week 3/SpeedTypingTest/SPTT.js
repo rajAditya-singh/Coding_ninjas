@@ -8,3 +8,5 @@ const speedElement = document.getElementById("speed");
 const accuracyElement = document.getElementById("accuracy");
 const resultElement = document.getElementById("result");
 const retryButton = document.getElementById("retry-btn");
+
+//
