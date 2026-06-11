@@ -4,8 +4,6 @@ const sentenceElement = document.getElementById("sentence");
 const inputElement = document.getElementById("input");
 const startButton = document.getElementById("start-btn");
 const timerElement = document.getElementById("timer");
-const speedElement = document.getElementById("speed");
-const accuracyElement = document.getElementById("accuracy");
 const resultElement = document.getElementById("result");
 const retryButton = document.getElementById("retry-btn");
 
@@ -23,12 +21,12 @@ function startTest() {
 function startTimer() {
     const timer = setInterval(() => {
         seconds--;
-
+        
         timerElement.textContent = `00:${seconds.toString().padStart(2, '0')}`
-
+        
         if (seconds <= 0) {
             clearInterval(timer)
-
+            
             resultElement.style.display = "block";
             inputElement.disabled = true
             startButton.disabled = true
@@ -44,6 +42,13 @@ retryButton.addEventListener("click", () => {
     seconds = 30
     timerElement.textContent = `00:${seconds.toString().padStart(2, '0')}`
     startTimer()
-
+    
 })
 
+const speedElement = document.getElementById("speed");
+const accuracyElement = document.getElementById("accuracy");
+
+
+function calculation(){
+
+}
