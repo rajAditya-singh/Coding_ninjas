@@ -46,3 +46,4 @@ retryButton.addEventListener("click", () => {
     startTimer()
 
 })
+
