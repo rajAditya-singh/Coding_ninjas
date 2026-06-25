@@ -5,6 +5,8 @@ body {
     display: flex;
     font-size: 2rem;
     transition: opacity 1s;
+    flex-wrap: wrap;
+    justify-content: center;
   }
   .user-card {
     width: 300px;
