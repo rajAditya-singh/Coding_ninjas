@@ -1,5 +1,7 @@
-for ( let i = 0; i < 3; i++) {
-    setTimeout( function() { 
-        console.log(i); 
-    }, i * 2000 );  
-  }
+const promiseNew = new Promise((resolve, reject) => {
+    console.log('One');
+});
+promiseNew.then(() => {
+    console.log('Three');
+});
+console.log('Two');
