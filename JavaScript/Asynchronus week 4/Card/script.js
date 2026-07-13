@@ -19,6 +19,4 @@ function getUser(id) {
     })
 }
 
-
 getUser(0);
-
