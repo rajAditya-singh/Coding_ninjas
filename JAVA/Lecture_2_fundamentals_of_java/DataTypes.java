@@ -17,8 +17,14 @@ class DataTypes {
 
         // Character (char) size - 2 bytes, range - 0 to 65535
         // char ch = 'a';
-        char ch = 97;
+        // char ch = 97;
+        String ch = "Adi";
+        // System.out.println(ch);
         System.out.println(ch);
+        System.out.println(a);
+        System.out.println(c);
+        System.out.println("Hello World");
+        // System.out.println('Hello World');
 
         // Boolean size - q byte, range - true &
         boolean rightToVote = false;
