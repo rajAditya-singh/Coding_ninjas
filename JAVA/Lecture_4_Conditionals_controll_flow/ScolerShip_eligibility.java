@@ -14,7 +14,7 @@ public class ScolerShip_eligibility {
         if(marks>=65){
             System.out.println("Enter Your GPA");
             double gpa = sc.nextDouble();
-            System.out.println("Enter Your Marks");
+            System.out.println("Enter Your star");
             float star = sc.nextFloat();
             if(gpa>=3.5 || star>=3){
                 System.out.println("Eligible For Scolership");
